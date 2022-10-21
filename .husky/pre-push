@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+git add -A && git commit -m 'includes latest commits to  CHANGELOG.md'
