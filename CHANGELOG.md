@@ -1,3 +1,8 @@
+- update lint-stage process
+- Merge pull request #2 from darcher-/setup-lib
+- package config updates to add commit hooks
+- includes change logs
+- includes yarn lockfile
 - includes helper method
 - includes icon component
 - includes button component
