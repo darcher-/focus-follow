@@ -91,8 +91,7 @@
   },
   "license": "UNLICENSED",
   "lint-staged": {
-    "**/*": "yarn run format:fix",
-    "src/**/*.js": "yarn run lint:fix"
+    "**/*": "yarn && yarn prepare && yarn changes && yarn format:fix && yarn lint:fix && yarn add -A"
   },
   "name": "focus-follow",
   "prettier": {
@@ -112,6 +111,11 @@
     "type": "git",
     "url": "git://github.com/darcher-/focus-follow.git"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "changes": "git log --pretty=\"- %s\" > CHANGELOG.md",
     "format": "node_modules/.bin/prettier src --ignore-unknown",
@@ -119,7 +123,6 @@
     "latest": "yarn upgrade --latest",
     "lint": "node_modules/.bin/eslint src/**/*.{js,css}",
     "prepare": "node_modules/.bin/husky install",
-    "process": "yarn && yarn prepare && yarn changes && yarn format --write && yarn lint --fix && yarn test",
     "test": "node_modules/.bin/jest --coverage --no-cache"
   },
   "type": "module",
