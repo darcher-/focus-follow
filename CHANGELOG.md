@@ -1,3 +1,5 @@
+- changes pre-push to post-commit
+- updates pre-push hooks
 - removes lint-staged & pkg config for husky
 - update lint-stage process
 - Merge pull request #2 from darcher-/setup-lib
