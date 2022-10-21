@@ -1,3 +1,4 @@
+- # This is a combination of 2 commits. # This is the 1st commit message:
 - changes pre-push to post-commit
 - updates pre-push hooks
 - removes lint-staged & pkg config for husky
