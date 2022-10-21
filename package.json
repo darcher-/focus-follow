@@ -91,7 +91,8 @@
   },
   "license": "UNLICENSED",
   "lint-staged": {
-    "**/*": "yarn && yarn prepare && yarn changes && yarn format:fix && yarn lint:fix && yarn add -A"
+    "**/*": "yarn format:fix && yarn lint:fix",
+    "*": "yarn && yarn prepare && yarn changes && yarn add -A"
   },
   "name": "focus-follow",
   "prettier": {
