@@ -1,0 +1,14 @@
+- includes helper method
+- includes icon component
+- includes button component
+- includes app root test
+- includes app root script
+- adds base html template
+- includes husky pre-commit commands
+- updates readme content
+- sets package dependancy configs
+- includes npm & yarn configs
+- updates files ignored by git
+- Merge pull request #1 from darcher-/ds-store-ignore
+- ignores .DS_Store files
+- Initial commit
