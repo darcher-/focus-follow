@@ -14,18 +14,18 @@ export const Button = {
       ? `
       <button
         class="${Util.buildText({
-    set: className,
-    prefix: "btn:",
-  })}"
+          set: className,
+          prefix: "btn:",
+        })}"
         role="${role}"
         type="${type}"
         ${{ ...attributes }}
       >
         <div class="btn:context">
           ${Icon.buildNode({
-    className: "btn:icon",
-    reference: btnIconId,
-  })}
+            className: "btn:icon",
+            reference: btnIconId,
+          })}
           <span class="btn:text">
             ${innerText}
           </span>

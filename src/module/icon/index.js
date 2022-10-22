@@ -12,9 +12,9 @@ export const Icon = {
       ? `
       <svg
         class="${Util.buildText({
-    set: className,
-    prefix: "icon:",
-  })}"
+          set: className,
+          prefix: "icon:",
+        })}"
         focusable="${focusable}"
         role="${role}"
         ${{ ...attributes }}
