@@ -1,3 +1,7 @@
+- config fine-tune
+- update root file visibility in vscode
+- logs
+- cypress early stages
 - static file relocation
 - config updates
 - Docker includes
