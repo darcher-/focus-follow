@@ -27,10 +27,10 @@ export default {
           id,
           role,
         })}>
-        ${Util.makeStringNode(svgIconId, Icon.makeComponent({svgIconId}))}
+        ${Util.makeStringNode(svgIconId, Icon.makeComponent({ svgIconId }))}
         ${Util.makeStringNode(
           label,
-          `<${title} class="label">${label}</${title}>`,
+          `<${title} class="label">${label}</${title}>`
         )}
         ${innerHTML}
       </${tagName}>`

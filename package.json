@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@babel/preset-env": "7.19.4",
+    "cypress": "10.10.0",
     "dotenv": "16.0.3"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "babel-jest": "29.2.2",
     "browserslist": "4.21.4",
     "circular-json": "0.5.9",
+    "cypress-jest-adapter": "0.1.1",
     "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-with-prettier": "6.0.0",
@@ -49,97 +51,6 @@
     "tsutils": "3.21.0",
     "uuid": "9.0.0"
   },
-  "peerDependencies": {
-    "@babel/plugin-syntax-flow": "7.18.6",
-    "@babel/plugin-transform-react-jsx": "7.19.0",
-    "eslint-plugin-flowtype": "8.0.3",
-    "eslint-plugin-jsx-a11y": "6.6.1",
-    "eslint-plugin-react": "7.31.10",
-    "prettier-eslint-cli": "7.1.0",
-    "tsutils": "3.21.0",
-    "uuid": "9.0.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2020": true
-    },
-    "extends": [
-      "prettier",
-      "eslint:recommended",
-      "eslint-config-prettier",
-      "eslint-config-with-prettier"
-    ],
-    "rules": {
-      "no-unused-vars": [
-        "error",
-        {}
-      ]
-    },
-    "ignorePatterns": [
-      "coverage/**/*",
-      "dist/**/*",
-      "node_modules/**/*"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 12,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    }
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "bracketSameLine": true,
-    "bracketSpacing": true,
-    "embeddedLanguageFormatting": "auto",
-    "endOfLine": "auto",
-    "htmlWhitespaceSensitivity": "css",
-    "insertPragma": false,
-    "jsxSingleQuote": false,
-    "printWidth": 80,
-    "proseWrap": "preserve",
-    "quoteProps": "as-needed",
-    "requirePragma": false,
-    "semi": true,
-    "singleQuote": false,
-    "tabWidth": 2,
-    "trailingComma": "all",
-    "useTabs": false,
-    "vueIndentScriptAndStyle": false
-  },
-  "jest": {
-    "bail": true,
-    "clearMocks": true,
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "./",
-      "src/**/*"
-    ],
-    "coverageDirectory": "coverage",
-    "coverageProvider": "babel",
-    "coverageReporters": [
-      "html",
-      "text",
-      "text-summary"
-    ],
-    "setupFilesAfterEnv": [
-      "./src/resources/scripts/jest-setup.js"
-    ],
-    "moduleFileExtensions": [
-      "js"
-    ],
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "*.test.js",
-      "**/*.test.js"
-    ],
-    "transform": {
-      "\\.js$": "babel-jest"
-    },
-    "verbose": true
-  },
   "license": "UNLICENSED",
   "name": "focus-follow",
   "private": true,
@@ -149,11 +60,10 @@
   },
   "scripts": {
     "changes": "git log --pretty=\"- %s\" > CHANGELOG.md",
-    "history": "git log --oneline --graph",
     "latest": "yarn upgrade --latest",
     "prepare": "husky install",
     "test": "jest --coverage --no-cache",
-    "lint": "prettier-eslint --write \"src/**/*.js\""
+    "lint": "prettier-eslint --write \"**/*.{js,css,html,json}\""
   },
   "type": "module",
   "version": "1.0.0"

@@ -13,7 +13,7 @@ describe("Icon element module", () => {
       Input.makeComponent({
         id: "test-1",
         label: "text content",
-      }),
+      })
     ).toContain("text content");
   });
   it("empty string if args are undefined", () => {
@@ -21,7 +21,7 @@ describe("Icon element module", () => {
       Input.makeComponent({
         id: "#test-1",
         label: "text content",
-      }),
+      })
     ).toContain('for="test-1"');
   });
 });

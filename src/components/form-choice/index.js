@@ -18,11 +18,11 @@ export default {
   } = {}) {
     window.addEventListener(
       "change",
-      ({target}) => {
+      ({ target }) => {
         target.setAttribute("aria-checked", target.checked);
         target.closest(".choice").setAttribute("data-checked", target.checked);
       },
-      false,
+      false
     );
 
     if (id && label) {

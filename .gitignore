@@ -11,6 +11,7 @@ dist
 logs
 node_modules
 
+.vscode
 .npm
 .eslintcache
 .yarn-integrity
