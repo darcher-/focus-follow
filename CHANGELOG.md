@@ -1,3 +1,5 @@
+- Merge pull request #3 from darcher-/some-more
+- dump
 - align format/lint
 - includes latest commits to  CHANGELOG.md
 - includes latest commits to  CHANGELOG.md
