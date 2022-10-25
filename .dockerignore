@@ -1,13 +1,13 @@
-*/*/build
-
 **/*.md
+*/*/build
 
 src/resources/static/*
 !src/resource/static/images
 !src/resource/static/fonts
 
-node_modules
 dist
+node_modules
+cypress.env.json
 
 **/.DS_Store
 **/Dockerfile

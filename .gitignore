@@ -9,6 +9,7 @@ npm-debug.log*
 logs/
 dist/
 coverage/
+cypress.env.json
 node_modules/
 
 .npm/
