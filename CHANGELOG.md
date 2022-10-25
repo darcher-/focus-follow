@@ -1,3 +1,5 @@
+- logs & styles
+- formatting adjustments
 - config fine-tune
 - update root file visibility in vscode
 - logs

@@ -1,11 +1,11 @@
-import {cy} from "cypress";
+import { cy } from "cypress";
 
 const endpoints = {
   dev: "dev.domain.com",
   stg: "stg.domain.com",
 };
 
-export default function createSomeObject({env, user, token}) {
+export default function createSomeObject({ env, user, token }) {
   const url = endpoints[env];
   const epoch = Date.now();
 
@@ -19,8 +19,8 @@ export default function createSomeObject({env, user, token}) {
         "x-submitter-id": user.id,
         "x-request-id": epoch,
       },
-      body: {data: {}},
+      body: { data: {} },
     })
-    .then((res) => ({...res.body}))
+    .then((res) => ({ ...res.body }))
     .catch((err) => err);
 }

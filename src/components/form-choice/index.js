@@ -18,11 +18,11 @@ export default {
   } = {}) {
     window.addEventListener(
       "change",
-      ({target}) => {
+      ({ target }) => {
         target.setAttribute("aria-checked", target.checked);
         target.closest(".choice").setAttribute("data-checked", target.checked);
       },
-      false,
+      false
     );
 
     if (id && label) {
@@ -30,7 +30,11 @@ export default {
         ? `
         <label
           ${Util.makeAttributes({
-            class: Util.arrayToString(["choice", ...classList, ...className.split(" ")]),
+            class: Util.arrayToString([
+              "choice",
+              ...classList,
+              ...className.split(" "),
+            ]),
             "data-checked": checked,
             "data-disabled": disabled,
             "data-type": type,

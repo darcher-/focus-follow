@@ -11,7 +11,11 @@ export default {
   } = {}) {
     return `<footer ${Util.makeAttributes({
       ...props,
-      class: Util.arrayToString(["footer", ...classList, ...className.split(" ")]),
+      class: Util.arrayToString([
+        "footer",
+        ...classList,
+        ...className.split(" "),
+      ]),
       id,
     })}>
       ${heading ? `<strong class="heading">${heading}</strong>` : ""}

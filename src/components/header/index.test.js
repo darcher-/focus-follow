@@ -16,7 +16,7 @@ describe("Header element module", () => {
     expect(header).toContain(`<h1 class="title">Some Title</h1>`);
 
     expect(header).toContain(
-      `<p class="subtitle">Some subtext that leads into the content</p>`,
+      `<p class="subtitle">Some subtext that leads into the content</p>`
     );
   });
 });

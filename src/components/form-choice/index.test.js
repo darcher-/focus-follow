@@ -17,7 +17,7 @@ describe("Choice element module", () => {
         type: "radio",
         checked: true,
         value: "z1",
-      }),
+      })
     ).toContain("Radio one label");
   });
   it("renders html-string of choice field with classing", () => {
@@ -29,7 +29,7 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain("choice test-btn btn-submit");
   });
   it("renders html-string of class", () => {
@@ -42,7 +42,7 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain("choice test-btn btn-submit");
   });
   it("removes # from id string and replaces it", () => {
@@ -55,7 +55,7 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain('for="Z1"');
   });
   it("does not render when missing label", () => {
@@ -67,7 +67,7 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toBe("");
   });
   it("does not render when missing id", () => {
@@ -77,7 +77,7 @@ describe("Choice element module", () => {
         type: "option",
         value: "z1",
         selected: true,
-      }),
+      })
     ).toBe("");
   });
   it("returns an option html-string when type is option", () => {
@@ -88,7 +88,7 @@ describe("Choice element module", () => {
         id: "Z1",
         type: "option",
         value: "z1",
-      }),
+      })
     ).toContain('<option value="z1" class="field"');
   });
   it("returns an option html-string when type is an option", () => {
@@ -109,7 +109,7 @@ describe("Choice element module", () => {
         },
       ]
         .map(Choice.makeComponent)
-        .join(""),
+        .join("")
     );
 
     const radioInput = document.getElementById("Z0");
@@ -119,7 +119,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: radioInput,
-      }),
+      })
     );
     expect(radioParent.dataset.checked).toBe("true");
 
@@ -130,7 +130,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: checkboxInput,
-      }),
+      })
     );
     expect(checkboxParent.dataset.checked).toBe("true");
 
@@ -140,7 +140,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: bodyFrame,
-      }),
+      })
     );
     expect(bodyFrame.dataset.checked).toBeUndefined();
   });

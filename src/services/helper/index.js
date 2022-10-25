@@ -13,7 +13,7 @@ export default {
       set && set.length,
       Array.isArray(set)
         ? set.map((txt) => `${prefix}${txt}${suffix}`).join(delimiter)
-        : `${prefix}${set}${suffix}`,
+        : `${prefix}${set}${suffix}`
     );
   },
 
@@ -33,7 +33,7 @@ export default {
         ...acc,
         [key]: value && typeof value === "object" ? this.deepFreeze() : value,
       }),
-      {},
+      {}
     );
 
     return Object.freeze(obj);
