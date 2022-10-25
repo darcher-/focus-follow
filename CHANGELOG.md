@@ -1,3 +1,4 @@
+- includes header/footer components
 - Merge pull request #3 from darcher-/some-more
 - dump
 - align format/lint
