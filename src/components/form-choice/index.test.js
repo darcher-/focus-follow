@@ -32,7 +32,7 @@ describe("Choice element module", () => {
       })
     ).toContain("choice test-btn btn-submit");
   });
-  it("renders html-string of choice field with classing", () => {
+  it("renders html-string of class", () => {
     expect(
       Choice.makeComponent({
         label: "Radio one label",
@@ -91,7 +91,7 @@ describe("Choice element module", () => {
       })
     ).toContain('<option value="z1" class="field"');
   });
-  it("returns an option html-string when type is option", () => {
+  it("returns an option html-string when type is an option", () => {
     document.body.insertAdjacentHTML(
       "beforeend",
       [

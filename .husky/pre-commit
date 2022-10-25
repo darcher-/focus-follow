@@ -1,8 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn
-yarn prepare
-yarn run lint
-yarn changes
-git add -A
+yarn "lint-staged"

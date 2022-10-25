@@ -1,3 +1,14 @@
+- override conflicting lint rules
+- logs & styles
+- formatting adjustments
+- config fine-tune
+- update root file visibility in vscode
+- logs
+- cypress early stages
+- static file relocation
+- config updates
+- Docker includes
+- lints, updates configs, etc.
 - includes header/footer components
 - Merge pull request #3 from darcher-/some-more
 - dump

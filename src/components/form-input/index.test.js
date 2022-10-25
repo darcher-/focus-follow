@@ -8,7 +8,7 @@ describe("Icon element module", () => {
   it("empty string if args are undefined", () => {
     expect(Input.makeComponent()).toBe("");
   });
-  it("empty string if args are undefined", () => {
+  it("shows label test", () => {
     expect(
       Input.makeComponent({
         id: "test-1",
@@ -16,7 +16,7 @@ describe("Icon element module", () => {
       })
     ).toContain("text content");
   });
-  it("empty string if args are undefined", () => {
+  it("shows no # in for", () => {
     expect(
       Input.makeComponent({
         id: "#test-1",

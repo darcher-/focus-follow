@@ -1,20 +1,12 @@
 {
-  "author": "darcher-",
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
+  "author": {
+    "name": "Dylan Archer",
+    "email": "dylarcher@gmail.com"
   },
   "dependencies": {
     "@babel/preset-env": "7.19.4",
-    "cypress": "10.10.0",
+    "cypress": "10.11.0",
+    "cypress-jest-adapter": "0.1.1",
     "dotenv": "16.0.3"
   },
   "devDependencies": {
@@ -25,11 +17,13 @@
     "@testing-library/dom": "8.19.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/user-event": "14.4.3",
+    "babel-eslint": "10.1.0",
     "babel-jest": "29.2.2",
     "browserslist": "4.21.4",
     "circular-json": "0.5.9",
-    "cypress-jest-adapter": "0.1.1",
     "eslint": "8.26.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-with-prettier": "6.0.0",
     "eslint-plugin-flowtype": "8.0.3",
@@ -38,18 +32,30 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.10",
+    "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.1",
     "jest": "29.2.2",
     "jest-environment-jsdom": "29.2.2",
+    "jest-junit": "14.0.1",
     "jsdom": "20.0.1",
+    "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "prettier-eslint": "15.0.1",
     "prettier-eslint-cli": "7.1.0",
+    "resolve-url": "0.2.1",
+    "source-map-url": "0.4.1",
     "stylelint": "14.14.0",
     "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-standard": "29.0.0",
+    "stylelint-order": "5.0.0",
     "stylelint-prettier": "2.0.0",
     "tsutils": "3.21.0",
+    "urix": "0.1.0",
     "uuid": "9.0.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs,json,html}": "prettier-eslint --write",
+    "*.{css,scss}": "stylelint --fix"
   },
   "license": "UNLICENSED",
   "name": "focus-follow",
@@ -59,11 +65,14 @@
     "url": "git://github.com/darcher-/focus-follow.git"
   },
   "scripts": {
-    "changes": "git log --pretty=\"- %s\" > CHANGELOG.md",
-    "latest": "yarn upgrade --latest",
-    "prepare": "husky install",
-    "test": "jest --coverage --no-cache",
-    "lint": "prettier-eslint --write \"**/*.{js,css,html,json}\""
+    "git:logs": "git log --pretty=\"- %s\" > CHANGELOG.md",
+    "lint:see": "eslint . && prettier-eslint --list-different --ignore-unknown $PWD/'**/*.{js,mjs,json,html}'",
+    "lint:js": "prettier-eslint --write --ignore-unknown $PWD/'**/*.{js,mjs,json,html}'",
+    "lint:css": "stylelint --fix **/*.{css,scss}",
+    "pkgs:upd": "yarn upgrade --latest",
+    "hook:pre": "husky install",
+    "test:cy": "cypress open",
+    "test:jest": "jest --coverage --no-cache"
   },
   "type": "module",
   "version": "1.0.0"

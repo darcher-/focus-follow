@@ -83,4 +83,21 @@ describe("Util method", () => {
       ).toBe("a b c d 1 2 3");
     });
   });
+
+  describe("DeepFreeze", () => {
+    it("freezes and object completely", () => {
+      const obj = Util.deepFreeze({
+        key: "value",
+        keyb: { keyc: 1, keyd: [2, 3, 4] },
+      });
+
+      expect(Object.isFrozen(obj)).toBeTruthy();
+    });
+  });
+
+  describe("randomInt", () => {
+    it("freezes and object completely", () => {
+      expect(typeof Util.randomInt()).toBe("number");
+    });
+  });
 });
