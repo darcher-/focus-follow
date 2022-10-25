@@ -2,8 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn
-yarn prepare 
-yarn run format --write
-yarn run lint --fix
+yarn prepare
+yarn run lint
 yarn changes
 git add -A
