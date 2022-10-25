@@ -26,4 +26,21 @@ export default {
   arrayToString(list) {
     return [...new Set(list)].join(" ").trim();
   },
+
+  deepFreeze(obj) {
+    const props = Object.getOwnPropertyNames(obj);
+    for (const key of props) {
+      const value = obj[key];
+
+      if (value && typeof value === "object") {
+        this.deepFreeze();
+      }
+    }
+
+    return Object.freeze(obj);
+  },
+
+  randomInt() {
+    return Math.round(Math.round() * 999);
+  },
 };
