@@ -1,0 +1,13 @@
+*/*/build
+
+**/*.md
+
+src/resources/static/*
+!src/resource/static/images
+!src/resource/static/fonts
+
+node_modules
+dist
+
+**/.DS_Store
+**/Dockerfile
