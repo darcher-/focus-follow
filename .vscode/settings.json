@@ -20,5 +20,22 @@
   "files.trimFinalNewlines": true,
   "workbench.editor.highlightModifiedTabs": true,
   "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": true
+  "prettier.stylelintIntegration": true,
+  "files.exclude": {
+    ".env": true,
+    ".gitignore": false,
+    ".husky": true,
+    ".npmrc": true,
+    ".prettierignore": true,
+    ".prettierrc": true,
+    ".yarnrc": true,
+    "CHANGELOG.md": true,
+    "LICENSE": true,
+    "README.md": true,
+    "coverage": true,
+    "dist": true,
+    "node_modules": true,
+    "yarn-error.log": true,
+    "yarn.lock": true
+  }
 }
