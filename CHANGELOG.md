@@ -1,3 +1,4 @@
+- override conflicting lint rules
 - logs & styles
 - formatting adjustments
 - config fine-tune
