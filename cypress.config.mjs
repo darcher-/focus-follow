@@ -1,11 +1,11 @@
-import { defineConfig } from "cypress";
+import {defineConfig} from "cypress";
 
 export default defineConfig({
   downloadsFolder: "./cypress/downloads",
   e2e: {
-    // setupNodeEvent(on, config) {
-    //   return import("./cypress/plugins/index.js")(on, config);
-    // },
+    setupNodeEvent(on, config) {
+      return import("./cypress/plugins")(on, config);
+    },
     specPattern: "**/*.spec.js",
     supportFile: "./cypress/support/index.js",
     watchForFileChanges: false,

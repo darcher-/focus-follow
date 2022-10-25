@@ -1,0 +1,26 @@
+{
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "plugins": ["flowtype"],
+  "extends": [
+    "eslint-config-prettier",
+    "eslint-config-with-prettier",
+    "eslint:recommended",
+    "plugin:flowtype/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": ["error", {}],
+    "jsx-a11y/no-onchange": 0
+  },
+  "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  }
+}
