@@ -5,4 +5,3 @@ yarn
 yarn prepare
 yarn run lint
 yarn changes
-git add -A
