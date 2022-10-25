@@ -9,13 +9,16 @@
     "eslint-config-prettier",
     "eslint-config-with-prettier",
     "eslint:recommended",
-    "plugin:flowtype/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:jsx-a11y/recommended"
   ],
   "rules": {
-    "no-unused-vars": ["error", {}],
-    "jsx-a11y/no-onchange": 0
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": false
+      }
+    ]
   },
   "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
   "parserOptions": {
