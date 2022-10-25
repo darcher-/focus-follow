@@ -1,3 +1,7 @@
+- static file relocation
+- config updates
+- Docker includes
+- lints, updates configs, etc.
 - includes header/footer components
 - Merge pull request #3 from darcher-/some-more
 - dump
