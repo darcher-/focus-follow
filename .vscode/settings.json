@@ -22,5 +22,8 @@
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "prettier.bracketSpacing": true,
-  "prettier.bracketSameLine": false
+  "prettier.bracketSameLine": false,
+  "files.exclude": {
+    "**/.git": false
+  }
 }

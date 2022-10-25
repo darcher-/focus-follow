@@ -5,6 +5,7 @@ export default {
   collectCoverageFrom: ["src/**/*"],
   coverageDirectory: "coverage",
   coverageProvider: "babel",
+  reporters: ["default", "jest-junit"],
   coverageReporters: ["html", "text", "text-summary"],
   setupFilesAfterEnv: ["./src/resources/scripts/jest.setup.js"],
   moduleFileExtensions: ["js"],
