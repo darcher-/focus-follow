@@ -19,19 +19,12 @@ export default {
       ? `
       <${tagName} ${Util.makeAttributes({
           ...props,
-          class: Util.arrayToString([
-            "group",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["group", ...classList, ...className.split(" ")]),
           id,
           role,
         })}>
-        ${Util.makeStringNode(svgIconId, Icon.makeComponent({ svgIconId }))}
-        ${Util.makeStringNode(
-          label,
-          `<${title} class="label">${label}</${title}>`
-        )}
+        ${Util.makeStringNode(svgIconId, Icon.makeComponent({svgIconId}))}
+        ${Util.makeStringNode(label, `<${title} class="label">${label}</${title}>`)}
         ${innerHTML}
       </${tagName}>`
       : "";

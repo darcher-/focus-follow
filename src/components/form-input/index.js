@@ -16,19 +16,15 @@ export default {
       ? `
       <label
         ${Util.makeAttributes({
-          class: Util.arrayToString([
-            "input",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["input", ...classList, ...className.split(" ")]),
           "data-disabled": disabled,
           "data-type": type,
           for: id.includes("#") ? id.replace("#", "") : id,
         })}>
-        ${Icon.makeComponent({ svgIconId })}
+        ${Icon.makeComponent({svgIconId})}
         <span class="label">${label}</span>
         <input
-          ${Util.makeAttributes({ ...props, class: "field", type, label, id })}
+          ${Util.makeAttributes({...props, class: "field", type, label, id})}
           ${Util.makeStringNode(disabled, "disabled")}
         />
       </label>`

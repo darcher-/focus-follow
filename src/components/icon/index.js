@@ -12,11 +12,7 @@ export default {
       ? `
       <svg
         ${Util.makeAttributes({
-          class: Util.arrayToString([
-            "icon",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["icon", ...classList, ...className.split(" ")]),
           focusable,
           role,
         })}

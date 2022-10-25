@@ -10,12 +10,10 @@ describe("Button element module", () => {
   });
 
   it("renders empty string when innerText is null", () => {
-    expect(Button.makeComponent({ innerText: null })).toBe("");
+    expect(Button.makeComponent({innerText: null})).toBe("");
   });
 
   it("renders button string when innerText is string", () => {
-    expect(Button.makeComponent({ innerText: "Test text" })).toContain(
-      "Test text"
-    );
+    expect(Button.makeComponent({innerText: "Test text"})).toContain("Test text");
   });
 });

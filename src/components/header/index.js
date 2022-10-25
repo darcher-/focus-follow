@@ -13,11 +13,7 @@ export default {
     return title && subtitle
       ? `<header ${Util.makeAttributes({
           ...props,
-          class: Util.arrayToString([
-            "header",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["header", ...classList, ...className.split(" ")]),
           id,
         })}>
       <h${level} class="title">${title}</h${level}>

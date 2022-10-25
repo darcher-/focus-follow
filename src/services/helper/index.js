@@ -13,7 +13,7 @@ export default {
       set && set.length,
       Array.isArray(set)
         ? set.map((txt) => `${prefix}${txt}${suffix}`).join(delimiter)
-        : `${prefix}${set}${suffix}`
+        : `${prefix}${set}${suffix}`,
     );
   },
 
@@ -27,15 +27,14 @@ export default {
     return [...new Set(list)].join(" ").trim();
   },
 
-  deepFreeze(obj) {
-    const props = Object.getOwnPropertyNames(obj);
-    for (const key of props) {
-      const value = obj[key];
-
-      if (value && typeof value === "object") {
-        this.deepFreeze();
-      }
-    }
+  deepFreeze(obj = {}) {
+    Object.entries(obj).reduce(
+      (acc, [key, value]) => ({
+        ...acc,
+        [key]: value && typeof value === "object" ? this.deepFreeze() : value,
+      }),
+      {},
+    );
 
     return Object.freeze(obj);
   },

@@ -17,19 +17,15 @@ export default {
       <button
         ${Util.makeAttributes({
           ...attributes,
-          class: Util.arrayToString([
-            "button",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["button", ...classList, ...className.split(" ")]),
           role,
           type,
         })}
       >
-        ${Icon.makeComponent({ className: "icon", svgIconId: btnIconId })}
+        ${Icon.makeComponent({className: "icon", svgIconId: btnIconId})}
         <span class="label">${innerText}</span>
       </button>
-    `
+    `,
     );
   },
 };

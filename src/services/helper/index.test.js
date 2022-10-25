@@ -11,55 +11,47 @@ describe("Util method", () => {
     });
 
     it("renders empty string when set is null", () => {
-      expect(Util.buildText({ set: null })).toBe("");
+      expect(Util.buildText({set: null})).toBe("");
     });
 
     it("renders empty string when set is empty string", () => {
-      expect(Util.buildText({ set: "" })).toBe("");
+      expect(Util.buildText({set: ""})).toBe("");
     });
 
     it("renders empty string when set isempty array", () => {
-      expect(Util.buildText({ set: [] })).toBe("");
+      expect(Util.buildText({set: []})).toBe("");
     });
 
     it("renders empty string when set it empty string", () => {
-      expect(Util.buildText({ set: "btn:default" })).toBe("btn:default");
+      expect(Util.buildText({set: "btn:default"})).toBe("btn:default");
     });
 
     it("renders items of array", () => {
-      expect(Util.buildText({ set: ["btn:outlined", "btn:rounded"] })).toBe(
-        "btn:outlined btn:rounded"
+      expect(Util.buildText({set: ["btn:outlined", "btn:rounded"]})).toBe(
+        "btn:outlined btn:rounded",
       );
     });
 
     it("renders items of array with prefix", () => {
-      expect(
-        Util.buildText({ set: ["outlined", "rounded"], prefix: "btn:" })
-      ).toBe("btn:outlined btn:rounded");
+      expect(Util.buildText({set: ["outlined", "rounded"], prefix: "btn:"})).toBe(
+        "btn:outlined btn:rounded",
+      );
     });
 
     it("renders item of string with suffix", () => {
-      expect(Util.buildText({ set: "btn:round", suffix: "ed" })).toBe(
-        "btn:rounded"
-      );
+      expect(Util.buildText({set: "btn:round", suffix: "ed"})).toBe("btn:rounded");
     });
   });
 
   describe("MakeStringNode", () => {
     it("renders value when condition succeeds", () => {
       expect(
-        Util.makeStringNode(
-          true,
-          `<div class="${["test", "element"].join("-")}">Test</div>`
-        )
+        Util.makeStringNode(true, `<div class="${["test", "element"].join("-")}">Test</div>`),
       ).toBe('<div class="test-element">Test</div>');
     });
     it("renders empty string  when condition fails", () => {
       expect(
-        Util.makeStringNode(
-          false,
-          `<div class="${["test", "element"].join("-")}">Test</div>`
-        )
+        Util.makeStringNode(false, `<div class="${["test", "element"].join("-")}">Test</div>`),
       ).toBe("");
     });
   });
@@ -71,16 +63,33 @@ describe("Util method", () => {
           class: "class-name",
           id: "some-id",
           role: "button",
-        })
+        }),
       ).toBe('class="class-name" id="some-id" role="button"');
     });
   });
 
   describe("ArrayToString", () => {
     it("creates a deduplicated string from an array", () => {
-      expect(
-        Util.arrayToString(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])
-      ).toBe("a b c d 1 2 3");
+      expect(Util.arrayToString(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])).toBe(
+        "a b c d 1 2 3",
+      );
+    });
+  });
+
+  describe("DeepFreeze", () => {
+    it("freezes and object completely", () => {
+      const obj = Util.deepFreeze({
+        key: "value",
+        keyb: {keyc: 1, keyd: [2, 3, 4]},
+      });
+
+      expect(Object.isFrozen(obj)).toBeTruthy();
+    });
+  });
+
+  describe("randomInt", () => {
+    it("freezes and object completely", () => {
+      expect(typeof Util.randomInt()).toBe("number");
     });
   });
 });
