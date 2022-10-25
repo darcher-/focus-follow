@@ -45,6 +45,8 @@
     "source-map-url": "0.4.1",
     "stylelint": "14.14.0",
     "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-standard": "29.0.0",
+    "stylelint-order": "5.0.0",
     "stylelint-prettier": "2.0.0",
     "tsutils": "3.21.0",
     "urix": "0.1.0",
