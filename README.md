@@ -9,17 +9,34 @@ This library creates a node to pursue the `document.activeElement` state, allowi
 
 Limits mundane tasks via automation, `pre-commit` hooks, and `git` actions, tests & linting.
 
-| Test and badge | Unit test only | Cypress test | Lint all files | Lint styles | Lint scripts | Lint report |
-|:---:|---|---|---|---|---|---|
-| `yarn run test` | `yarn test:jest` | `yarn test:cy` | `yarn run lint` | `yarn lint:css` | `yarn lint:js` | `yarn lint:see` |
-
-##### `pre-commit` hook
-
 ```sh
-yarn lint-staged   # lints all files & runs jest tests
-```
+# lint all files
+yarn run lint 
 
----
+# lint styles
+yarn run lint:css 
+
+# lint data & scripts
+yarn run lint:js  
+
+# view lint report
+yarn run lint:view 
+
+# jest tests & coverage badge svg
+yarn run test
+
+# cypress tests
+yarn run test:cy
+
+# jest tests
+yarn run test:jest
+
+# generate coverage badge svg
+yarn run test:badge
+
+# `pre-commit` hook (only tests/lints staged files)
+yarn run lint-staged
+```
 
 <img width="1301" alt="Screen Shot 2022-10-25 at 6 27 04 PM" src="https://user-images.githubusercontent.com/984251/197893899-1ddfc480-d35f-45f1-aaf2-727576b57e2e.png">
 
