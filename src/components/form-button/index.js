@@ -26,10 +26,10 @@ export default {
           type,
         })}
       >
-        ${Icon.makeComponent({className: "icon", svgIconId: btnIconId})}
+        ${Icon.makeComponent({ className: "icon", svgIconId: btnIconId })}
         <span class="label">${innerText}</span>
       </button>
-    `,
+    `
     );
   },
 };

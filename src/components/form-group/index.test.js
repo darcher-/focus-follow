@@ -14,7 +14,7 @@ describe("Icon element module", () => {
         id: "test-1",
         label: "text content",
         innerHTML: `<span class="something">test</span>`,
-      }),
+      })
     ).toContain(`
         <legend class="label">text content</legend>
         <span class="something">test</span>
@@ -27,7 +27,7 @@ describe("Icon element module", () => {
         label: "text content",
         tagName: "div",
         innerHTML: `<span class="something">test</span>`,
-      }),
+      })
     ).toContain(`
         <span class="label">text content</span>
         <span class="something">test</span>
