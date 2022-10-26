@@ -7,15 +7,15 @@ yarn-error.log*
 npm-debug.log*
 
 logs/
-dist/
-coverage/
-cypress.env.json
+# dist/
+# coverage/
+# cypress.env.json
 node_modules/
 
 .npm/
-.vscode/ -f
+# .vscode/
 .eslintcache
 .yarn-integrity
 .DS_store
 .cache
-.env
+# .env
