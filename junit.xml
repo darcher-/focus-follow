@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="42" failures="0" errors="0" time="10.888">
-  <testsuite name="Util method" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:52" time="6.449" tests="14">
-    <testcase classname="Util method BuildText renders empty string when set is undefined" name="Util method BuildText renders empty string when set is undefined" time="0.02">
+<testsuites name="jest tests" tests="45" failures="0" errors="0" time="13.608">
+  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:55" time="9.06" tests="4">
+    <testcase classname="Icon element module renders empty string when svgIconId is undefined" name="Icon element module renders empty string when svgIconId is undefined" time="0.004">
+    </testcase>
+    <testcase classname="Icon element module renders empty string when svgIconId is null" name="Icon element module renders empty string when svgIconId is null" time="0.001">
+    </testcase>
+    <testcase classname="Icon element module renders icom string when svgIconId is reference" name="Icon element module renders icom string when svgIconId is reference" time="0.001">
+    </testcase>
+    <testcase classname="Icon element module renders icon string when svgIconId is id reference" name="Icon element module renders icon string when svgIconId is id reference" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Util method" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:55" time="9.299" tests="17">
+    <testcase classname="Util method BuildText renders empty string when set is undefined" name="Util method BuildText renders empty string when set is undefined" time="0.003">
     </testcase>
     <testcase classname="Util method BuildText renders empty string when set is null" name="Util method BuildText renders empty string when set is null" time="0.001">
     </testcase>
@@ -9,97 +19,93 @@
     </testcase>
     <testcase classname="Util method BuildText renders empty string when set isempty array" name="Util method BuildText renders empty string when set isempty array" time="0.001">
     </testcase>
-    <testcase classname="Util method BuildText renders empty string when set it empty string" name="Util method BuildText renders empty string when set it empty string" time="0.001">
+    <testcase classname="Util method BuildText renders empty string when set it empty string" name="Util method BuildText renders empty string when set it empty string" time="0.013">
     </testcase>
-    <testcase classname="Util method BuildText renders items of array" name="Util method BuildText renders items of array" time="0.003">
+    <testcase classname="Util method BuildText renders items of array" name="Util method BuildText renders items of array" time="0.001">
     </testcase>
-    <testcase classname="Util method BuildText renders items of array with prefix" name="Util method BuildText renders items of array with prefix" time="0.006">
+    <testcase classname="Util method BuildText renders items of array with prefix" name="Util method BuildText renders items of array with prefix" time="0.001">
     </testcase>
-    <testcase classname="Util method BuildText renders item of string with suffix" name="Util method BuildText renders item of string with suffix" time="0.001">
+    <testcase classname="Util method BuildText renders item of string with suffix" name="Util method BuildText renders item of string with suffix" time="0">
     </testcase>
     <testcase classname="Util method booleanProperty renders value when condition succeeds" name="Util method booleanProperty renders value when condition succeeds" time="0">
     </testcase>
     <testcase classname="Util method booleanProperty renders empty string  when condition fails" name="Util method booleanProperty renders empty string  when condition fails" time="0">
     </testcase>
-    <testcase classname="Util method MakeAttributes creates html-string attributes from object" name="Util method MakeAttributes creates html-string attributes from object" time="0.001">
+    <testcase classname="Util method MakeAttributes creates html-string attributes from object" name="Util method MakeAttributes creates html-string attributes from object" time="0">
     </testcase>
     <testcase classname="Util method ArrayToString creates a deduplicated string from an array" name="Util method ArrayToString creates a deduplicated string from an array" time="0.001">
     </testcase>
-    <testcase classname="Util method DeepFreeze freezes and object completely" name="Util method DeepFreeze freezes and object completely" time="0">
+    <testcase classname="Util method DeepFreeze freezes and object completely" name="Util method DeepFreeze freezes and object completely" time="0.003">
     </testcase>
     <testcase classname="Util method randomInt freezes and object completely" name="Util method randomInt freezes and object completely" time="0">
     </testcase>
+    <testcase classname="Util method removeFromString removes character from string" name="Util method removeFromString removes character from string" time="0.001">
+    </testcase>
+    <testcase classname="Util method removeFromString cannot remove character from null" name="Util method removeFromString cannot remove character from null" time="0">
+    </testcase>
+    <testcase classname="Util method removeFromString cannot remove null from string" name="Util method removeFromString cannot remove null from string" time="0">
+    </testcase>
   </testsuite>
-  <testsuite name="Choice element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:52" time="6.81" tests="9">
-    <testcase classname="Choice element module renders empty string when undefined" name="Choice element module renders empty string when undefined" time="0.073">
+  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:54" time="9.939" tests="3">
+    <testcase classname="Icon element module empty string if args are undefined" name="Icon element module empty string if args are undefined" time="0.004">
+    </testcase>
+    <testcase classname="Icon element module shows label test" name="Icon element module shows label test" time="0.001">
+    </testcase>
+    <testcase classname="Icon element module shows no # in for" name="Icon element module shows no # in for" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:54" time="10.198" tests="3">
+    <testcase classname="Icon element module empty string if args are undefined" name="Icon element module empty string if args are undefined" time="0.08">
+    </testcase>
+    <testcase classname="Icon element module fieldset group" name="Icon element module fieldset group" time="0.074">
+    </testcase>
+    <testcase classname="Icon element module div group" name="Icon element module div group" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Footer element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:55" time="9.831" tests="3">
+    <testcase classname="Footer element module loads footer still when no data provided" name="Footer element module loads footer still when no data provided" time="0.003">
+    </testcase>
+    <testcase classname="Footer element module loads footer element" name="Footer element module loads footer element" time="0.002">
+    </testcase>
+    <testcase classname="Footer element module loads footer element without heading" name="Footer element module loads footer element without heading" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Root module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:54" time="10.067" tests="1">
+    <testcase classname="Root module App instance initializes" name="Root module App instance initializes" time="0.045">
+    </testcase>
+  </testsuite>
+  <testsuite name="Header element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:54" time="10.093" tests="2">
+    <testcase classname="Header element module loads empty string when no data provided" name="Header element module loads empty string when no data provided" time="0.004">
+    </testcase>
+    <testcase classname="Header element module loads header element" name="Header element module loads header element" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Choice element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:55" time="9.643" tests="9">
+    <testcase classname="Choice element module renders empty string when undefined" name="Choice element module renders empty string when undefined" time="0.003">
     </testcase>
     <testcase classname="Choice element module renders html-string of choice field" name="Choice element module renders html-string of choice field" time="0.001">
     </testcase>
-    <testcase classname="Choice element module renders html-string of choice field with classing" name="Choice element module renders html-string of choice field with classing" time="0.004">
+    <testcase classname="Choice element module renders html-string of choice field with classing" name="Choice element module renders html-string of choice field with classing" time="0.001">
     </testcase>
     <testcase classname="Choice element module renders html-string of class" name="Choice element module renders html-string of class" time="0.001">
     </testcase>
     <testcase classname="Choice element module removes # from id string and replaces it" name="Choice element module removes # from id string and replaces it" time="0.001">
     </testcase>
-    <testcase classname="Choice element module does not render when missing label" name="Choice element module does not render when missing label" time="0.001">
+    <testcase classname="Choice element module does not render when missing label" name="Choice element module does not render when missing label" time="0">
     </testcase>
-    <testcase classname="Choice element module does not render when missing id" name="Choice element module does not render when missing id" time="0">
+    <testcase classname="Choice element module does not render when missing id" name="Choice element module does not render when missing id" time="0.001">
     </testcase>
     <testcase classname="Choice element module returns an option html-string when type is option" name="Choice element module returns an option html-string when type is option" time="0">
     </testcase>
-    <testcase classname="Choice element module returns an option html-string when type is an option" name="Choice element module returns an option html-string when type is an option" time="0.169">
+    <testcase classname="Choice element module returns an option html-string when type is an option" name="Choice element module returns an option html-string when type is an option" time="0.04">
     </testcase>
   </testsuite>
-  <testsuite name="Button element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:52" time="6.879" tests="3">
-    <testcase classname="Button element module renders empty string when undefined" name="Button element module renders empty string when undefined" time="0.003">
+  <testsuite name="Button element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:50:54" time="10.329" tests="3">
+    <testcase classname="Button element module renders empty string when undefined" name="Button element module renders empty string when undefined" time="0.005">
     </testcase>
-    <testcase classname="Button element module renders empty string when innerText is null" name="Button element module renders empty string when innerText is null" time="0.02">
+    <testcase classname="Button element module renders empty string when innerText is null" name="Button element module renders empty string when innerText is null" time="0.001">
     </testcase>
     <testcase classname="Button element module renders button string when innerText is string" name="Button element module renders button string when innerText is string" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:53" time="6.392" tests="4">
-    <testcase classname="Icon element module renders empty string when svgIconId is undefined" name="Icon element module renders empty string when svgIconId is undefined" time="0.014">
-    </testcase>
-    <testcase classname="Icon element module renders empty string when svgIconId is null" name="Icon element module renders empty string when svgIconId is null" time="0">
-    </testcase>
-    <testcase classname="Icon element module renders icom string when svgIconId is reference" name="Icon element module renders icom string when svgIconId is reference" time="0.002">
-    </testcase>
-    <testcase classname="Icon element module renders icon string when svgIconId is id reference" name="Icon element module renders icon string when svgIconId is id reference" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Header element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:53" time="6.376" tests="2">
-    <testcase classname="Header element module loads empty string when no data provided" name="Header element module loads empty string when no data provided" time="0.019">
-    </testcase>
-    <testcase classname="Header element module loads header element" name="Header element module loads header element" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Root module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:52" time="6.958" tests="1">
-    <testcase classname="Root module App instance initializes" name="Root module App instance initializes" time="0.027">
-    </testcase>
-  </testsuite>
-  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:53" time="6.518" tests="3">
-    <testcase classname="Icon element module empty string if args are undefined" name="Icon element module empty string if args are undefined" time="0.008">
-    </testcase>
-    <testcase classname="Icon element module fieldset group" name="Icon element module fieldset group" time="0.002">
-    </testcase>
-    <testcase classname="Icon element module div group" name="Icon element module div group" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Footer element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:52" time="6.979" tests="3">
-    <testcase classname="Footer element module loads footer still when no data provided" name="Footer element module loads footer still when no data provided" time="0.004">
-    </testcase>
-    <testcase classname="Footer element module loads footer element" name="Footer element module loads footer element" time="0.001">
-    </testcase>
-    <testcase classname="Footer element module loads footer element without heading" name="Footer element module loads footer element without heading" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="Icon element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T00:46:53" time="6.715" tests="3">
-    <testcase classname="Icon element module empty string if args are undefined" name="Icon element module empty string if args are undefined" time="0.003">
-    </testcase>
-    <testcase classname="Icon element module shows label test" name="Icon element module shows label test" time="0.001">
-    </testcase>
-    <testcase classname="Icon element module shows no # in for" name="Icon element module shows no # in for" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>

@@ -6,7 +6,7 @@ export default {
   coverageDirectory: "coverage",
   coverageProvider: "babel",
   reporters: ["default", "jest-junit"],
-  coverageReporters: ["json-summary"],
+  coverageReporters: ["text-summary", "html", "text", "json-summary"],
   setupFilesAfterEnv: ["./src/resources/scripts/jest.setup.js"],
   moduleFileExtensions: ["js"],
   testEnvironment: "jsdom",

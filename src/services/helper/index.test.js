@@ -100,4 +100,18 @@ describe("Util method", () => {
       expect(typeof Util.randomInt()).toBe("number");
     });
   });
+
+  describe("removeFromString", () => {
+    it("removes character from string", () => {
+      expect(Util.removeFromString("#test", "#")).toBe("test");
+    });
+
+    it("cannot remove character from null", () => {
+      expect(Util.removeFromString(null, "#")).toBe(null);
+    });
+
+    it("cannot remove null from string", () => {
+      expect(Util.removeFromString("#test", null)).toBe("#test");
+    });
+  });
 });
