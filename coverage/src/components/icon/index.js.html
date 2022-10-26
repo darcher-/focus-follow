@@ -121,7 +121,7 @@ export default {
             role,
           })}
         &gt;
-          &lt;use xlink:href="#${Util.discard(svgIconId, "#")}" /&gt;
+          &lt;use xlink:href="#${Util.remove(svgIconId, "#")}" /&gt;
         &lt;/svg&gt;
       `,
     );

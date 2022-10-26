@@ -1,35 +1,17 @@
-import Util from "../../services/helper";
-import Icon from "../icon";
+import { verify, assign, bundle } from "../../services/helper";
+import "./style";
+
+// TODO: establish structure for children
 
 export default {
-  attach({
-    className = "",
-    classList = [],
-    btnIconId,
-    innerText,
-    role = "button",
-    type = "button",
-    ...attributes
-  } = {}) {
-    return Util.verify(
-      innerText != null,
-      `
-      <button
-        ${Util.assign({
-          ...attributes,
-          class: Util.bundle([
-            "button",
-            ...classList,
-            ...className.split(" "),
-          ]),
-          role,
-          type,
-        })}
-      >
-        ${Icon.attach({ className: "icon", svgIconId: btnIconId })}
-        <span class="label">${innerText}</span>
-      </button>
-    `
-    );
+  attach({ classes, icon, label, ...etc } = {}) {
+    return `<button
+      ${assign({
+        ...etc,
+        class: bundle(["button", ...classes]),
+      })}>
+      ${verify(null != icon, icon)}
+      ${verify(null != label, label)}
+    </button>`;
   },
 };

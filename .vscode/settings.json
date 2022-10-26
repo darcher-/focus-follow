@@ -21,7 +21,7 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "explorer.sortOrder": "type",
   "files.associations": { "*.xml": "html", "*.svg": "html" },
@@ -32,5 +32,7 @@
   "prettier.bracketSpacing": true,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.documentSelectors": ["**/*.svg"]
 }

@@ -1,0 +1,5 @@
+.copyright,
+.heading,
+.footer {
+  display: flex;
+}

@@ -25,6 +25,7 @@
     "babel-jest": "29.2.2",
     "browserslist": "4.21.4",
     "eslint": "8.26.0",
+    "eslint-plugin-json": "3.1.0",
     "husky": "8.0.1",
     "jest": "29.2.2",
     "jest-environment-jsdom": "29.2.2",
@@ -36,12 +37,12 @@
     "stylelint": "14.14.0"
   },
   "lint-staged": {
-    "src/**/*.test.{js,ts,mjs,cjs,jsx,tsx}": "jest --coverage --no-cache",
-    "src/**/*.{js,ts,mjs,cjs,jsx,tsx,json}": "eslint --fix",
-    "src/**/*.{xml,svg,htm,html}": "prettier --write",
-    "src/**/*.{css,scss,sass,less}": "stylelint --fix",
+    "src/**/*.test.{js,mjs}": "jest --coverage --no-cache",
+    "src/**/*.{js,mjs,json,jsonc,json5}": "eslint --fix",
+    "src/**/*.{svg,html}": "prettier --write",
+    "src/**/*.css": "stylelint --fix",
     "CHANGELOG.md": "git log --pretty=\"- %s\" > CHANGELOG.md",
-    "src/**/*": "git add -A"
+    "*": "git add -A"
   },
   "license": "UNLICENSED",
   "name": "focus-follow",

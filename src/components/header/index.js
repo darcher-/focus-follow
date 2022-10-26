@@ -1,31 +1,14 @@
-import Util from "../../services/helper";
+import { assign, bundle, verify } from "../../services/helper";
+import "./style";
 
 export default {
-  attach({
-    classList = [],
-    className = "",
-    id,
-    level = 1,
-    title,
-    subtitle,
-    ...props
-  } = {}) {
-    return Util.verify(
-      title && subtitle,
-      `
-        <header ${Util.assign({
-          ...props,
-          class: Util.bundle([
-            "header",
-            ...classList,
-            ...className.split(" "),
-          ]),
-          id,
-        })}>
-          <h${level} class="title">${title}</h${level}>
-          <p class="subtitle">${subtitle}</p>
-        </header>
-      `
-    );
+  attach({ children, text, level = 1, classes, ...etc } = {}) {
+    return `<header ${assign({
+      ...etc,
+      class: bundle(["footer", ...classes]),
+    })}>
+      <h${level}>${verify(null != text, text)}</h${level}>
+      ${verify(0 < children?.length, children)}
+    </header>`;
   },
 };

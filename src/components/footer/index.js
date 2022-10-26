@@ -1,20 +1,11 @@
-// vanilla esm js export
-
-import Fn from "../../services/helper";
-import "./index.css";
+import { assign, bundle, verify } from "../../services/helper";
+import "./style";
 
 export default {
-  attach({ context, ...etc } = {}) {
-    return `
-      <footer ${Fn.assign({
-        ...etc,
-        class: Fn.bundle(["footer", ...etc.classList]),
-      })}>
-        ${Fn.verify(
-          context != null,
-          `<p class="subtext">${context}</p>`
-        )}
-      </footer>
-    `;
+  attach({ children, classes, ...etc } = {}) {
+    return `<footer ${assign({
+      ...etc,
+      class: bundle(["footer", ...classes]),
+    })}>${verify(0 < children?.length, children)}</footer>`;
   },
 };

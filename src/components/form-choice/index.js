@@ -1,84 +1,39 @@
-import Util from "../../services/helper";
+import { assign, bundle, verify } from "../../services/helper";
+import "./style";
 
-// type Role = string & ("checkbox" | "option" | "radio");
-// interface Choice<T extends HTMLElement> extends T { value: ArrayLike<T>; }
-// Option.makeElement<T extends HTMLElement>({ attributes: Choice<T> }): ArrayLike[T] {}
+// TODO: make icon dynamic with fallback
+// TODO: create a label component
+// TODO: create an input component?
+// TODO: create an option component?
 
 export default {
-  attach({
-    checked = false,
-    selected = false,
-    classList = [],
-    className = "",
-    disabled = false,
-    type = "radio",
-    label,
-    id,
-    ...props
-  } = {}) {
-    window.addEventListener(
-      "change",
-      ({ target }) => {
-        target.setAttribute("aria-checked", target.checked);
-        target
-          .closest(".choice")
-          .setAttribute("data-checked", target.checked);
-      },
-      false
+  attach({ classes, disabled, id, label, type, ...etc } = {}) {
+    const attr = assign({ ...etc, class: "field", type, id });
+
+    return verify(
+      null != (id || label),
+      bundle([
+        verify(
+          ["radio", "checkbox"].includes(type),
+          `<label
+            ${assign({ class: bundle(["choice", ...classes]) })}>
+            <input
+              ${attr}
+              ${verify(disabled, "disabled")}
+              hidden />
+            <span class="mark" aria-hidden="true"></span>
+            ${label}
+          </label>`
+        ),
+        verify(
+          type == "option",
+          `<option
+            ${attr}
+            ${verify(disabled, "disabled")}>
+            ${label}
+          </option>`
+        ),
+      ])
     );
-
-    if ([id, label].includes(undefined)) {
-      return "";
-    }
-
-    const inputNode = Util.verify(
-      ["radio", "checkbox"].includes(type),
-      `
-        <label
-          ${Util.assign({
-            "class": Util.bundle([
-              "choice",
-              ...classList,
-              ...className.split(" "),
-            ]),
-            "data-checked": checked,
-            "data-disabled": disabled,
-            "data-type": type,
-            "for": Util.discard(id, "#"),
-          })}>
-          <input
-            ${Util.assign({
-              ...props,
-              class: "field",
-              type,
-              label,
-              id,
-            })}
-            ${Util.verify(checked, "checked")}
-            ${Util.verify(disabled, "disabled")}
-            hidden
-          />
-          <span class="mark" aria-hidden="true"></span>
-          <span class="label">${label}</span>
-        </label>
-      `
-    );
-
-    const optionNode = Util.verify(
-      ["option"].includes(type),
-      `<option ${Util.assign({
-        ...props,
-        class: "field",
-        type,
-        label,
-        id,
-      })}
-        ${Util.verify(selected, "selected")}
-        ${Util.verify(disabled, "disabled")}>
-        ${label}
-      </option>`
-    );
-
-    return inputNode + optionNode;
   },
 };

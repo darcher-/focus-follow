@@ -173,7 +173,7 @@ export default {
             class: Util.bundle(["input", ...classList, ...className.split(" ")]),
             "data-disabled": disabled,
             "data-type": type,
-            for: Util.discard(id, "#"),
+            for: Util.remove(id, "#"),
           })}&gt;
           ${Icon.attach({ svgIconId })}
           &lt;span class="label"&gt;${label}&lt;/span&gt;
