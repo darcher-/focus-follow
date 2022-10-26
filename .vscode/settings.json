@@ -1,12 +1,20 @@
 {
-  "[css]": { "editor.defaultFormatter": "stylelint.vscode-stylelint" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[javascript]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
-  "[javascriptreact]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[typescript]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
-  "[typescriptreact]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
   "editor.acceptSuggestionOnEnter": "off",
   "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "block",

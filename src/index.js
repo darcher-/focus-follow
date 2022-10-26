@@ -8,4 +8,4 @@ import Button from "./components/form-button";
 
 dotenv.config();
 
-document.body.insertAdjacentHTML("beforeend", Button.makeComponent());
+document.body.insertAdjacentHTML("beforeend", Button.attach());

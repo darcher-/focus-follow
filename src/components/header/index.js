@@ -1,19 +1,31 @@
 import Util from "../../services/helper";
 
 export default {
-  makeComponent({ classList = [], className = "", id, level = 1, title, subtitle, ...props } = {}) {
-    return Util.booleanProperty(
+  attach({
+    classList = [],
+    className = "",
+    id,
+    level = 1,
+    title,
+    subtitle,
+    ...props
+  } = {}) {
+    return Util.verify(
       title && subtitle,
       `
-        <header ${Util.makeAttributes({
+        <header ${Util.assign({
           ...props,
-          class: Util.arrayToString(["header", ...classList, ...className.split(" ")]),
+          class: Util.bundle([
+            "header",
+            ...classList,
+            ...className.split(" "),
+          ]),
           id,
         })}>
           <h${level} class="title">${title}</h${level}>
           <p class="subtitle">${subtitle}</p>
         </header>
-      `,
+      `
     );
   },
 };

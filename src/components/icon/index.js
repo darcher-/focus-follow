@@ -1,20 +1,30 @@
 import Util from "../../services/helper";
 
 export default {
-  makeComponent({ classList = [], className = "", focusable = "false", role = "img", svgIconId = null } = {}) {
-    return Util.booleanProperty(
+  attach({
+    classList = [],
+    className = "",
+    focusable = "false",
+    role = "img",
+    svgIconId = null,
+  } = {}) {
+    return Util.verify(
       svgIconId != null,
       `
         <svg
-          ${Util.makeAttributes({
-            class: Util.arrayToString(["icon", ...classList, ...className.split(" ")]),
+          ${Util.assign({
+            class: Util.bundle([
+              "icon",
+              ...classList,
+              ...className.split(" "),
+            ]),
             focusable,
             role,
           })}
         >
-          <use xlink:href="#${Util.removeFromString(svgIconId, "#")}" />
+          <use xlink:href="#${Util.discard(svgIconId, "#")}" />
         </svg>
-      `,
+      `
     );
   },
 };

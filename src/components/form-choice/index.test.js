@@ -6,38 +6,38 @@ afterEach(() => {
 
 describe("Choice element module", () => {
   it("renders empty string when undefined", () => {
-    expect(Choice.makeComponent()).toBe("");
+    expect(Choice.attach()).toBe("");
   });
 
   it("renders html-string of choice field", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         name: "_z",
         type: "radio",
         checked: true,
         value: "z1",
-      }),
+      })
     ).toContain("Radio one label");
   });
 
   it("renders html-string of choice field with classing", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         type: "checkbox",
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain("choice test-btn btn-submit");
   });
 
   it("renders html-string of class", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         type: "radio",
@@ -45,13 +45,13 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain("choice test-btn btn-submit");
   });
 
   it("removes # from id string and replaces it", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "#Z1",
         type: "checkbox",
@@ -59,43 +59,43 @@ describe("Choice element module", () => {
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toContain('for="Z1"');
   });
 
   it("does not render when missing label", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         id: "Z1",
         type: "checkbox",
         checked: true,
         value: "z1",
         className: "test-btn btn-submit",
         classList: ["test-btn", "btn-submit"],
-      }),
+      })
     ).toBe("");
   });
 
   it("does not render when missing id", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Label text",
         type: "option",
         value: "z1",
         selected: true,
-      }),
+      })
     ).toBe("");
   });
 
   it("returns an option html-string when type is option", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         disabled: true,
         label: "Label text",
         id: "Z1",
         type: "option",
         value: "z1",
-      }),
+      })
     ).toContain('<option value="z1" class="field"');
   });
 
@@ -116,8 +116,8 @@ describe("Choice element module", () => {
           label: "checkbox label",
         },
       ]
-        .map(Choice.makeComponent)
-        .join(""),
+        .map(Choice.attach)
+        .join("")
     );
 
     const radioInput = document.getElementById("Z0");
@@ -127,7 +127,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: radioInput,
-      }),
+      })
     );
     expect(radioParent.dataset.checked).toBe("true");
 
@@ -138,7 +138,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: checkboxInput,
-      }),
+      })
     );
     expect(checkboxParent.dataset.checked).toBe("true");
 
@@ -148,7 +148,7 @@ describe("Choice element module", () => {
         bubbles: true,
         cancelable: true,
         relatedTarget: bodyFrame,
-      }),
+      })
     );
     expect(bodyFrame.dataset.checked).toBeUndefined();
   });

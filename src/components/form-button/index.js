@@ -2,7 +2,7 @@ import Util from "../../services/helper";
 import Icon from "../icon";
 
 export default {
-  makeComponent({
+  attach({
     className = "",
     classList = [],
     btnIconId,
@@ -11,21 +11,25 @@ export default {
     type = "button",
     ...attributes
   } = {}) {
-    return Util.booleanProperty(
+    return Util.verify(
       innerText != null,
       `
       <button
-        ${Util.makeAttributes({
+        ${Util.assign({
           ...attributes,
-          class: Util.arrayToString(["button", ...classList, ...className.split(" ")]),
+          class: Util.bundle([
+            "button",
+            ...classList,
+            ...className.split(" "),
+          ]),
           role,
           type,
         })}
       >
-        ${Icon.makeComponent({ className: "icon", svgIconId: btnIconId })}
+        ${Icon.attach({ className: "icon", svgIconId: btnIconId })}
         <span class="label">${innerText}</span>
       </button>
-    `,
+    `
     );
   },
 };

@@ -6,24 +6,24 @@ afterEach(() => {
 
 describe("Icon element module", () => {
   it("empty string if args are undefined", () => {
-    expect(Input.makeComponent()).toBe("");
+    expect(Input.attach()).toBe("");
   });
 
   it("shows label test", () => {
     expect(
-      Input.makeComponent({
+      Input.attach({
         id: "test-1",
         label: "text content",
-      }),
+      })
     ).toContain("text content");
   });
 
   it("shows no # in for", () => {
     expect(
-      Input.makeComponent({
+      Input.attach({
         id: "#test-1",
         label: "text content",
-      }),
+      })
     ).toContain('for="test-1"');
   });
 });

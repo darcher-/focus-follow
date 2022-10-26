@@ -5,7 +5,7 @@ import Util from "../../services/helper";
 // Option.makeElement<T extends HTMLElement>({ attributes: Choice<T> }): ArrayLike[T] {}
 
 export default {
-  makeComponent({
+  attach({
     checked = false,
     selected = false,
     classList = [],
@@ -20,57 +20,63 @@ export default {
       "change",
       ({ target }) => {
         target.setAttribute("aria-checked", target.checked);
-        target.closest(".choice").setAttribute("data-checked", target.checked);
+        target
+          .closest(".choice")
+          .setAttribute("data-checked", target.checked);
       },
-      false,
+      false
     );
 
     if ([id, label].includes(undefined)) {
       return "";
     }
 
-    const inputNode = Util.booleanProperty(
+    const inputNode = Util.verify(
       ["radio", "checkbox"].includes(type),
       `
         <label
-          ${Util.makeAttributes({
-            class: Util.arrayToString(["choice", ...classList, ...className.split(" ")]),
+          ${Util.assign({
+            "class": Util.bundle([
+              "choice",
+              ...classList,
+              ...className.split(" "),
+            ]),
             "data-checked": checked,
             "data-disabled": disabled,
             "data-type": type,
-            for: Util.removeFromString(id, "#"),
+            "for": Util.discard(id, "#"),
           })}>
           <input
-            ${Util.makeAttributes({
+            ${Util.assign({
               ...props,
               class: "field",
               type,
               label,
               id,
             })}
-            ${Util.booleanProperty(checked, "checked")}
-            ${Util.booleanProperty(disabled, "disabled")}
+            ${Util.verify(checked, "checked")}
+            ${Util.verify(disabled, "disabled")}
             hidden
           />
           <span class="mark" aria-hidden="true"></span>
           <span class="label">${label}</span>
         </label>
-      `,
+      `
     );
 
-    const optionNode = Util.booleanProperty(
+    const optionNode = Util.verify(
       ["option"].includes(type),
-      `<option ${Util.makeAttributes({
+      `<option ${Util.assign({
         ...props,
         class: "field",
         type,
         label,
         id,
       })}
-        ${Util.booleanProperty(selected, "selected")}
-        ${Util.booleanProperty(disabled, "disabled")}>
+        ${Util.verify(selected, "selected")}
+        ${Util.verify(disabled, "disabled")}>
         ${label}
-      </option>`,
+      </option>`
     );
 
     return inputNode + optionNode;

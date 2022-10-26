@@ -17,23 +17,23 @@
     </testcase>
     <testcase classname="Util method BuildText renders item of string with suffix" name="Util method BuildText renders item of string with suffix" time="0">
     </testcase>
-    <testcase classname="Util method booleanProperty renders value when condition succeeds" name="Util method booleanProperty renders value when condition succeeds" time="0">
+    <testcase classname="Util method verify renders value when condition succeeds" name="Util method verify renders value when condition succeeds" time="0">
     </testcase>
-    <testcase classname="Util method booleanProperty renders empty string  when condition fails" name="Util method booleanProperty renders empty string  when condition fails" time="0">
+    <testcase classname="Util method verify renders empty string  when condition fails" name="Util method verify renders empty string  when condition fails" time="0">
     </testcase>
-    <testcase classname="Util method MakeAttributes creates html-string attributes from object" name="Util method MakeAttributes creates html-string attributes from object" time="0">
+    <testcase classname="Util method assign creates html-string attributes from object" name="Util method assign creates html-string attributes from object" time="0">
     </testcase>
-    <testcase classname="Util method ArrayToString creates a deduplicated string from an array" name="Util method ArrayToString creates a deduplicated string from an array" time="0">
+    <testcase classname="Util method bundle creates a deduplicated string from an array" name="Util method bundle creates a deduplicated string from an array" time="0">
     </testcase>
     <testcase classname="Util method DeepFreeze freezes and object completely" name="Util method DeepFreeze freezes and object completely" time="0">
     </testcase>
     <testcase classname="Util method randomInt freezes and object completely" name="Util method randomInt freezes and object completely" time="0">
     </testcase>
-    <testcase classname="Util method removeFromString removes character from string" name="Util method removeFromString removes character from string" time="0">
+    <testcase classname="Util method discard removes character from string" name="Util method discard removes character from string" time="0">
     </testcase>
-    <testcase classname="Util method removeFromString cannot remove character from null" name="Util method removeFromString cannot remove character from null" time="0">
+    <testcase classname="Util method discard cannot remove character from null" name="Util method discard cannot remove character from null" time="0">
     </testcase>
-    <testcase classname="Util method removeFromString cannot remove null from string" name="Util method removeFromString cannot remove null from string" time="0">
+    <testcase classname="Util method discard cannot remove null from string" name="Util method discard cannot remove null from string" time="0">
     </testcase>
   </testsuite>
   <testsuite name="Footer element module" errors="0" failures="0" skipped="0" timestamp="2022-10-26T02:12:43" time="0.737" tests="3">

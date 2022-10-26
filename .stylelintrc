@@ -41,8 +41,8 @@
       }
     ],
     "selector-attribute-quotes": "always",
-    "selector-class-pattern": "namingPattern",
-    "selector-id-pattern": "namingPattern",
+    "selector-class-pattern": "[a-z0-9]",
+    "selector-id-pattern": "[a-zA-Z0-9]",
     "selector-max-compound-selectors": 4,
     "selector-max-specificity": "1,3,3",
     "selector-max-id": 1,
