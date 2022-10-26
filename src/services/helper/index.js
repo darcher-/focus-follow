@@ -1,6 +1,10 @@
 export default {
-  makeStringNode(condition, value) {
+  booleanProperty(condition, value) {
     return condition ? value : "";
+  },
+
+  removeFromString(value, target) {
+    return value && value.includes(target) ? value.replace(target, "") : value;
   },
 
   buildText({
@@ -9,7 +13,7 @@ export default {
     suffix = "",
     set = "", // or []
   } = {}) {
-    return this.makeStringNode(
+    return this.booleanProperty(
       set && set.length,
       Array.isArray(set)
         ? set.map((txt) => `${prefix}${txt}${suffix}`).join(delimiter)

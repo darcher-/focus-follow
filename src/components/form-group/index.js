@@ -13,27 +13,28 @@ export default {
     svgIconId = "#field-group",
     ...props
   } = {}) {
-    const title = tagName === "fieldset" ? "legend" : "span";
+    const tag = tagName === "fieldset" ? "legend" : "span";
 
-    return innerHTML
-      ? `
-      <${tagName} ${Util.makeAttributes({
-          ...props,
-          class: Util.arrayToString([
-            "group",
-            ...classList,
-            ...className.split(" "),
-          ]),
-          id,
-          role,
-        })}>
-        ${Util.makeStringNode(svgIconId, Icon.makeComponent({ svgIconId }))}
-        ${Util.makeStringNode(
+    return Util.booleanProperty(
+      innerHTML,
+      `
+        <${tagName} ${Util.makeAttributes({
+        ...props,
+        class: Util.arrayToString([
+          "group",
+          ...classList,
+          ...className.split(" "),
+        ]),
+        id,
+        role,
+      })}>
+        ${Util.booleanProperty(svgIconId, Icon.makeComponent({ svgIconId }))}
+        ${Util.booleanProperty(
           label,
-          `<${title} class="label">${label}</${title}>`
+          `<${tag} class="label">${label}</${tag}>`
         )}
         ${innerHTML}
       </${tagName}>`
-      : "";
+    );
   },
 };

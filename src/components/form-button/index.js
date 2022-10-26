@@ -11,8 +11,8 @@ export default {
     type = "button",
     ...attributes
   } = {}) {
-    return Util.makeStringNode(
-      innerText,
+    return Util.booleanProperty(
+      innerText != null,
       `
       <button
         ${Util.makeAttributes({

@@ -6,26 +6,25 @@ export default {
     className = "",
     focusable = "false",
     role = "img",
-    svgIconId,
+    svgIconId = null,
   } = {}) {
-    return svgIconId != null && svgIconId.length > 1
-      ? `
-      <svg
-        ${Util.makeAttributes({
-          class: Util.arrayToString([
-            "icon",
-            ...classList,
-            ...className.split(" "),
-          ]),
-          focusable,
-          role,
-        })}
-      >
-        <use xlink:href="#${
-          svgIconId.includes("#") ? svgIconId.replace("#", "") : svgIconId
-        }" />
-      </svg>
-    `
-      : "";
+    return Util.booleanProperty(
+      svgIconId != null,
+      `
+        <svg
+          ${Util.makeAttributes({
+            class: Util.arrayToString([
+              "icon",
+              ...classList,
+              ...className.split(" "),
+            ]),
+            focusable,
+            role,
+          })}
+        >
+          <use xlink:href="#${Util.removeFromString(svgIconId, "#")}" />
+        </svg>
+      `
+    );
   },
 };

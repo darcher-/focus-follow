@@ -18,8 +18,14 @@ export default {
       ]),
       id,
     })}>
-      ${heading ? `<strong class="heading">${heading}</strong>` : ""}
-      <p class="copyright">${copyright}</p>
+      ${Util.booleanProperty(
+        heading,
+        `<strong class="heading">${heading}</strong>`
+      )}
+      ${Util.booleanProperty(
+        copyright,
+        `<p class="copyright">${copyright}</p>`
+      )}
     </footer>`;
   },
 };

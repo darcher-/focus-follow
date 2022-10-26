@@ -1,3 +1,17 @@
+- resolves variable typo
+- updates tests over helper method name change
+- applies helper method to large conditionals
+- junit dependency addition
+- coverage report as json
+- bump wrap width
+- checks in some pre-emptive dependencies
+- lint style config & peer deps
+- change log
+- cypress updated support dependancies
+- packages & cypress
+- commit hooks
+- ignored files
+- formats
 - override conflicting lint rules
 - logs & styles
 - formatting adjustments

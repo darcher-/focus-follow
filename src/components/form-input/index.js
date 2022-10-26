@@ -12,26 +12,34 @@ export default {
     type = "text",
     ...props
   } = {}) {
-    return label && id
-      ? `
-      <label
-        ${Util.makeAttributes({
-          class: Util.arrayToString([
-            "input",
-            ...classList,
-            ...className.split(" "),
-          ]),
-          "data-disabled": disabled,
-          "data-type": type,
-          for: id.includes("#") ? id.replace("#", "") : id,
-        })}>
-        ${Icon.makeComponent({ svgIconId })}
-        <span class="label">${label}</span>
-        <input
-          ${Util.makeAttributes({ ...props, class: "field", type, label, id })}
-          ${Util.makeStringNode(disabled, "disabled")}
-        />
-      </label>`
-      : "";
+    return Util.booleanProperty(
+      label && id,
+      `
+        <label
+          ${Util.makeAttributes({
+            class: Util.arrayToString([
+              "input",
+              ...classList,
+              ...className.split(" "),
+            ]),
+            "data-disabled": disabled,
+            "data-type": type,
+            for: Util.removeFromString(id, "#"),
+          })}>
+          ${Icon.makeComponent({ svgIconId })}
+          <span class="label">${label}</span>
+          <input
+            ${Util.makeAttributes({
+              ...props,
+              class: "field",
+              type,
+              label,
+              id,
+            })}
+            ${Util.booleanProperty(disabled, "disabled")}
+          />
+        </label>
+      `
+    );
   },
 };

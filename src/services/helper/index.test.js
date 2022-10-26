@@ -45,10 +45,10 @@ describe("Util method", () => {
     });
   });
 
-  describe("MakeStringNode", () => {
+  describe("booleanProperty", () => {
     it("renders value when condition succeeds", () => {
       expect(
-        Util.makeStringNode(
+        Util.booleanProperty(
           true,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -56,7 +56,7 @@ describe("Util method", () => {
     });
     it("renders empty string  when condition fails", () => {
       expect(
-        Util.makeStringNode(
+        Util.booleanProperty(
           false,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -98,6 +98,20 @@ describe("Util method", () => {
   describe("randomInt", () => {
     it("freezes and object completely", () => {
       expect(typeof Util.randomInt()).toBe("number");
+    });
+  });
+
+  describe("removeFromString", () => {
+    it("removes character from string", () => {
+      expect(Util.removeFromString("#test", "#")).toBe("test");
+    });
+
+    it("cannot remove character from null", () => {
+      expect(Util.removeFromString(null, "#")).toBe(null);
+    });
+
+    it("cannot remove null from string", () => {
+      expect(Util.removeFromString("#test", null)).toBe("#test");
     });
   });
 });
