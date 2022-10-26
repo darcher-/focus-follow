@@ -22,19 +22,19 @@ export default {
         target.setAttribute("aria-checked", target.checked);
         target.closest(".choice").setAttribute("data-checked", target.checked);
       },
-      false
+      false,
     );
 
+    if ([id, label].includes(undefined)) {
+      return "";
+    }
+
     const inputNode = Util.booleanProperty(
-      id && label && ["radio", "checkbox"].includes(type),
+      ["radio", "checkbox"].includes(type),
       `
         <label
           ${Util.makeAttributes({
-            class: Util.arrayToString([
-              "choice",
-              ...classList,
-              ...className.split(" "),
-            ]),
+            class: Util.arrayToString(["choice", ...classList, ...className.split(" ")]),
             "data-checked": checked,
             "data-disabled": disabled,
             "data-type": type,
@@ -55,11 +55,11 @@ export default {
           <span class="mark" aria-hidden="true"></span>
           <span class="label">${label}</span>
         </label>
-      `
+      `,
     );
 
     const optionNode = Util.booleanProperty(
-      id && label && ["option"].includes(type),
+      ["option"].includes(type),
       `<option ${Util.makeAttributes({
         ...props,
         class: "field",
@@ -70,7 +70,7 @@ export default {
         ${Util.booleanProperty(selected, "selected")}
         ${Util.booleanProperty(disabled, "disabled")}>
         ${label}
-      </option>`
+      </option>`,
     );
 
     return inputNode + optionNode;

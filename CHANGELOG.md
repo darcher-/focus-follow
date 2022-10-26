@@ -27,9 +27,9 @@
 - Merge pull request #3 from darcher-/some-more
 - dump
 - align format/lint
-- includes latest commits to  CHANGELOG.md
-- includes latest commits to  CHANGELOG.md
-- includes latest commits to  CHANGELOG.md
+- includes latest commits to CHANGELOG.md
+- includes latest commits to CHANGELOG.md
+- includes latest commits to CHANGELOG.md
 - # This is a combination of 2 commits. # This is the 1st commit message:
 - changes pre-push to post-commit
 - updates pre-push hooks

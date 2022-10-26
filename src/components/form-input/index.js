@@ -17,11 +17,7 @@ export default {
       `
         <label
           ${Util.makeAttributes({
-            class: Util.arrayToString([
-              "input",
-              ...classList,
-              ...className.split(" "),
-            ]),
+            class: Util.arrayToString(["input", ...classList, ...className.split(" ")]),
             "data-disabled": disabled,
             "data-type": type,
             for: Util.removeFromString(id, "#"),
@@ -39,7 +35,7 @@ export default {
             ${Util.booleanProperty(disabled, "disabled")}
           />
         </label>
-      `
+      `,
     );
   },
 };

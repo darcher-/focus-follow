@@ -13,7 +13,7 @@ cypress.env.json
 node_modules/
 
 .npm/
-.vscode/
+.vscode/ -f
 .eslintcache
 .yarn-integrity
 .DS_store

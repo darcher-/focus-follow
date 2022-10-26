@@ -14,14 +14,10 @@ describe("Icon element module", () => {
   });
 
   it("renders icom string when svgIconId is reference", () => {
-    expect(Icon.makeComponent({ svgIconId: "#some-ref" })).toContain(
-      'xlink:href="#some-ref"'
-    );
+    expect(Icon.makeComponent({ svgIconId: "#some-ref" })).toContain('xlink:href="#some-ref"');
   });
 
   it("renders icon string when svgIconId is id reference", () => {
-    expect(Icon.makeComponent({ svgIconId: "some-ref" })).toContain(
-      'xlink:href="#some-ref"'
-    );
+    expect(Icon.makeComponent({ svgIconId: "some-ref" })).toContain('xlink:href="#some-ref"');
   });
 });

@@ -14,8 +14,6 @@ describe("Button element module", () => {
   });
 
   it("renders button string when innerText is string", () => {
-    expect(Button.makeComponent({ innerText: "Test text" })).toContain(
-      "Test text"
-    );
+    expect(Button.makeComponent({ innerText: "Test text" })).toContain("Test text");
   });
 });

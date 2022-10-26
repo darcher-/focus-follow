@@ -5,8 +5,8 @@ export default {
   makeComponent({
     className = "",
     classList = [],
-    btnIconId = "#icon-mouse",
-    innerText = null,
+    btnIconId,
+    innerText,
     role = "button",
     type = "button",
     ...attributes
@@ -17,11 +17,7 @@ export default {
       <button
         ${Util.makeAttributes({
           ...attributes,
-          class: Util.arrayToString([
-            "button",
-            ...classList,
-            ...className.split(" "),
-          ]),
+          class: Util.arrayToString(["button", ...classList, ...className.split(" ")]),
           role,
           type,
         })}
@@ -29,7 +25,7 @@ export default {
         ${Icon.makeComponent({ className: "icon", svgIconId: btnIconId })}
         <span class="label">${innerText}</span>
       </button>
-    `
+    `,
     );
   },
 };

@@ -20,21 +20,14 @@ export default {
       `
         <${tagName} ${Util.makeAttributes({
         ...props,
-        class: Util.arrayToString([
-          "group",
-          ...classList,
-          ...className.split(" "),
-        ]),
+        class: Util.arrayToString(["group", ...classList, ...className.split(" ")]),
         id,
         role,
       })}>
         ${Util.booleanProperty(svgIconId, Icon.makeComponent({ svgIconId }))}
-        ${Util.booleanProperty(
-          label,
-          `<${tag} class="label">${label}</${tag}>`
-        )}
+        ${Util.booleanProperty(label, `<${tag} class="label">${label}</${tag}>`)}
         ${innerHTML}
-      </${tagName}>`
+      </${tagName}>`,
     );
   },
 };

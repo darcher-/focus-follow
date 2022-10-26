@@ -16,7 +16,9 @@
       "error",
       {},
       {
-        "usePrettierrc": false
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
       }
     ]
   },
