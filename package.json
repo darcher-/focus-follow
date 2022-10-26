@@ -55,7 +55,7 @@
     "uuid": "9.0.0"
   },
   "lint-staged": {
-    "*.{js,ts,mjs,cjs,jsx,tsx,xml,svg,json,html}": "prettier-eslint --write",
+    "*.{js,ts,mjs,cjs,jsx,tsx,json,html}": "prettier-eslint --write",
     "*.{css,scss,sass,less}": "stylelint --fix",
     "*": "git add -A"
   },
