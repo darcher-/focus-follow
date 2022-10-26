@@ -10,8 +10,10 @@ export default {
     subtitle,
     ...props
   } = {}) {
-    return title && subtitle
-      ? `<header ${Util.makeAttributes({
+    return Util.booleanProperty(
+      title && subtitle,
+      `
+        <header ${Util.makeAttributes({
           ...props,
           class: Util.arrayToString([
             "header",
@@ -20,9 +22,10 @@ export default {
           ]),
           id,
         })}>
-      <h${level} class="title">${title}</h${level}>
-      <p class="subtitle">${subtitle}</p>
-    </header>`
-      : "";
+          <h${level} class="title">${title}</h${level}>
+          <p class="subtitle">${subtitle}</p>
+        </header>
+      `
+    );
   },
 };

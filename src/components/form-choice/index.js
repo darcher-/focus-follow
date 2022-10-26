@@ -25,9 +25,9 @@ export default {
       false
     );
 
-    if (id && label) {
-      return ["radio", "checkbox"].includes(type)
-        ? `
+    const inputNode = Util.booleanProperty(
+      id && label && ["radio", "checkbox"].includes(type),
+      `
         <label
           ${Util.makeAttributes({
             class: Util.arrayToString([
@@ -38,7 +38,7 @@ export default {
             "data-checked": checked,
             "data-disabled": disabled,
             "data-type": type,
-            for: id.includes("#") ? id.replace("#", "") : id,
+            for: Util.removeFromString(id, "#"),
           })}>
           <input
             ${Util.makeAttributes({
@@ -48,28 +48,31 @@ export default {
               label,
               id,
             })}
-            ${Util.makeStringNode(checked, "checked")}
-            ${Util.makeStringNode(disabled, "disabled")}
+            ${Util.booleanProperty(checked, "checked")}
+            ${Util.booleanProperty(disabled, "disabled")}
             hidden
           />
           <span class="mark" aria-hidden="true"></span>
           <span class="label">${label}</span>
         </label>
       `
-        : `
-      <option ${Util.makeAttributes({
+    );
+
+    const optionNode = Util.booleanProperty(
+      id && label && ["option"].includes(type),
+      `<option ${Util.makeAttributes({
         ...props,
         class: "field",
         type,
         label,
         id,
       })}
-        ${Util.makeStringNode(selected, "selected")}
-        ${Util.makeStringNode(disabled, "disabled")}>
+        ${Util.booleanProperty(selected, "selected")}
+        ${Util.booleanProperty(disabled, "disabled")}>
         ${label}
-      </option>`;
-    }
+      </option>`
+    );
 
-    return "";
+    return inputNode + optionNode;
   },
 };
