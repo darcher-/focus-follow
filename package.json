@@ -34,15 +34,14 @@
     "lint-staged": "13.0.3",
     "make-coverage-badge": "1.2.0",
     "prettier": "2.7.1",
-    "stylelint": "14.14.0"
+    "stylelint": "14.14.0",
+    "stylelint-config-standard": "29.0.0",
+    "stylelint-order": "5.0.0"
   },
   "lint-staged": {
-    "src/**/*.test.{js,mjs}": "jest --coverage --no-cache",
-    "src/**/*.{js,mjs,json,jsonc,json5}": "eslint --fix",
-    "src/**/*.{svg,html}": "prettier --write",
-    "src/**/*.css": "stylelint --fix",
-    "CHANGELOG.md": "git log --pretty=\"- %s\" > CHANGELOG.md",
-    "*": "git add -A"
+    "*.{js,mjs,json,jsonc,json5}": "eslint --fix",
+    "*.{svg,html}": "prettier --write",
+    "*.css": "stylelint --fix"
   },
   "license": "UNLICENSED",
   "name": "focus-follow",
@@ -53,10 +52,11 @@
   },
   "scripts": {
     "cypress": "cypress open",
-    "eslint": "eslint \"**/*.{js,mjs,json}\"",
+    "eslint": "eslint --quiet \"**/*.{js,mjs,json}\"",
     "prettier": "prettier --check \"**/*.{svg,html}\"",
     "stylelint": "stylelint \"**/*.css\"",
-    "test": "jest --coverage --no-cache && jest-coverage-badge"
+    "test": "jest --coverage --no-cache && jest-coverage-badge",
+    "commits": "git log --pretty=\"- %s\" > CHANGELOG.md"
   },
   "type": "module",
   "version": "1.0.0"
