@@ -36,6 +36,7 @@
     "src/**/*.{js,ts,mjs,cjs,jsx,tsx,json}": "eslint --fix",
     "src/**/*.{xml,svg,htm,html}": "prettier --write",
     "src/**/*.{css,scss,sass,less}": "stylelint --fix",
+    "CHANGELOG.md": "git log --pretty=\"- %s\" > CHANGELOG.md",
     "src/**/*": "git add -A"
   },
   "license": "UNLICENSED",
@@ -46,9 +47,11 @@
     "url": "git://github.com/darcher-/focus-follow.git"
   },
   "scripts": {
-    "log-commits": "git log --pretty=\"- %s\" > CHANGELOG.md",
-    "test": "jest --coverage --no-cache && jest-coverage-badge",
-    "test:flow": "cypress open"
+    "cypress": "cypress open",
+    "eslint": "eslint \"**/*.{js,mjs,json}\"",
+    "prettier": "prettier --check \"**/*.{svg,html}\"",
+    "stylelint": "stylelint \"**/*.css\"",
+    "test": "jest --coverage --no-cache && jest-coverage-badge"
   },
   "type": "module",
   "version": "1.0.0"
