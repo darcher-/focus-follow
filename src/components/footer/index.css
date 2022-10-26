@@ -1,7 +1,0 @@
-/** styles, unsure if I'll use dart-sass or not yet */
-
-.footer,
-.heading,
-.copyright {
-  display: flex;
-}

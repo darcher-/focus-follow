@@ -1,4 +1,13 @@
-import Util from ".";
+/*global afterEach, jest, it, expect, describe */
+import {
+  assign,
+  bundle,
+  compile,
+  random,
+  remove,
+  freeze,
+  verify,
+} from ".";
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -7,41 +16,39 @@ afterEach(() => {
 describe("Util method", () => {
   describe("BuildText", () => {
     it("renders empty string when set is undefined", () => {
-      expect(Util.buildText()).toBe("");
+      expect(compile()).toBe("");
     });
 
     it("renders empty string when set is null", () => {
-      expect(Util.buildText({ set: null })).toBe("");
+      expect(compile({ set: null })).toBe("");
     });
 
     it("renders empty string when set is empty string", () => {
-      expect(Util.buildText({ set: "" })).toBe("");
+      expect(compile({ set: "" })).toBe("");
     });
 
     it("renders empty string when set isempty array", () => {
-      expect(Util.buildText({ set: [] })).toBe("");
+      expect(compile({ set: [] })).toBe("");
     });
 
     it("renders empty string when set it empty string", () => {
-      expect(Util.buildText({ set: "btn:default" })).toBe(
-        "btn:default"
-      );
+      expect(compile({ set: "btn:default" })).toBe("btn:default");
     });
 
     it("renders items of array", () => {
-      expect(
-        Util.buildText({ set: ["btn:outlined", "btn:rounded"] })
-      ).toBe("btn:outlined btn:rounded");
+      expect(compile({ set: ["btn:outlined", "btn:rounded"] })).toBe(
+        "btn:outlined btn:rounded"
+      );
     });
 
     it("renders items of array with prefix", () => {
       expect(
-        Util.buildText({ set: ["outlined", "rounded"], prefix: "btn:" })
+        compile({ set: ["outlined", "rounded"], prefix: "btn:" })
       ).toBe("btn:outlined btn:rounded");
     });
 
     it("renders item of string with suffix", () => {
-      expect(Util.buildText({ set: "btn:round", suffix: "ed" })).toBe(
+      expect(compile({ set: "btn:round", suffix: "ed" })).toBe(
         "btn:rounded"
       );
     });
@@ -50,7 +57,7 @@ describe("Util method", () => {
   describe("verify", () => {
     it("renders value when condition succeeds", () => {
       expect(
-        Util.verify(
+        verify(
           true,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -58,7 +65,7 @@ describe("Util method", () => {
     });
     it("renders empty string  when condition fails", () => {
       expect(
-        Util.verify(
+        verify(
           false,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -69,7 +76,7 @@ describe("Util method", () => {
   describe("assign", () => {
     it("creates html-string attributes from object", () => {
       expect(
-        Util.assign({
+        assign({
           class: "class-name",
           id: "some-id",
           role: "button",
@@ -81,14 +88,14 @@ describe("Util method", () => {
   describe("bundle", () => {
     it("creates a deduplicated string from an array", () => {
       expect(
-        Util.bundle(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])
+        bundle(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])
       ).toBe("a b c d 1 2 3");
     });
   });
 
   describe("DeepFreeze", () => {
     it("freezes and object completely", () => {
-      const obj = Util.deepFreeze({
+      const obj = freeze({
         key: "value",
         keyb: { keyc: 1, keyd: [2, 3, 4] },
       });
@@ -99,21 +106,21 @@ describe("Util method", () => {
 
   describe("randomInt", () => {
     it("freezes and object completely", () => {
-      expect(typeof Util.randomInt()).toBe("number");
+      expect(typeof random()).toBe("number");
     });
   });
 
-  describe("discard", () => {
+  describe("remove", () => {
     it("removes character from string", () => {
-      expect(Util.discard("#test", "#")).toBe("test");
+      expect(remove("#", "#test")).toBe("test");
     });
 
     it("cannot remove character from null", () => {
-      expect(Util.discard(null, "#")).toBe(null);
+      expect(remove("#", null)).toBe(null);
     });
 
     it("cannot remove null from string", () => {
-      expect(Util.discard("#test", null)).toBe("#test");
+      expect(remove(null, "#test")).toBe("#test");
     });
   });
 });

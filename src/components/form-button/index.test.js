@@ -1,4 +1,5 @@
-import Button from ".";
+/*global afterEach, jest, it, expect, describe */
+import { attach } from ".";
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -6,16 +7,14 @@ afterEach(() => {
 
 describe("Button element module", () => {
   it("renders empty string when undefined", () => {
-    expect(Button.attach()).toBe("");
+    expect(attach()).toBe("");
   });
 
   it("renders empty string when innerText is null", () => {
-    expect(Button.attach({ innerText: null })).toBe("");
+    expect(attach({ innerText: null })).toBe("");
   });
 
   it("renders button string when innerText is string", () => {
-    expect(Button.attach({ innerText: "Test text" })).toContain(
-      "Test text"
-    );
+    expect(attach({ innerText: "Test text" })).toContain("Test text");
   });
 });

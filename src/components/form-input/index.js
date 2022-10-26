@@ -1,45 +1,27 @@
-import Util from "../../services/helper";
-import Icon from "../icon";
+import { assign, bundle, verify } from "../../services/helper";
+import "./style";
 
 export default {
   attach({
-    classList = [],
-    className = "",
+    classes,
     disabled = false,
     id,
     label,
-    svgIconId = "#text-bubble",
+    icon,
     type = "text",
-    ...props
+    ...etc
   } = {}) {
-    return Util.verify(
-      label && id,
-      `
-        <label
-          ${Util.assign({
-            "class": Util.bundle([
-              "input",
-              ...classList,
-              ...className.split(" "),
-            ]),
-            "data-disabled": disabled,
-            "data-type": type,
-            "for": Util.discard(id, "#"),
-          })}>
-          ${Icon.attach({ svgIconId })}
-          <span class="label">${label}</span>
-          <input
-            ${Util.assign({
-              ...props,
-              class: "field",
-              type,
-              label,
-              id,
-            })}
-            ${Util.verify(disabled, "disabled")}
-          />
-        </label>
-      `
+    return verify(
+      null != id,
+      `<label
+        ${assign({ class: bundle(["entry", ...classes]) })}>
+        ${verify(null != icon?.id, icon)}
+        ${verify(null != label?.text, label)}>
+        <input
+          ${assign({ ...etc, class: "field", type, id })}
+          ${verify(disabled, "disabled")}
+        />
+      </label>`
     );
   },
 };

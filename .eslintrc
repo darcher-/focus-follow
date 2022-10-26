@@ -10,6 +10,7 @@
     "eslint:recommended",
     "plugin:jsx-a11y/recommended"
   ],
+  "globals": { "focus-follow": true },
   "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
   "parserOptions": {
     "ecmaVersion": 12,

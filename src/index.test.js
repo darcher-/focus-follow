@@ -1,3 +1,4 @@
+/*global afterEach, jest, it, expect, describe */
 import App from ".";
 
 afterEach(() => {

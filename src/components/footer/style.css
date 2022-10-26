@@ -1,0 +1,7 @@
+/** footer styles */
+
+.footer,
+.heading,
+.copyright {
+  display: flex;
+}
