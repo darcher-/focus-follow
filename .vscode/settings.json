@@ -21,7 +21,7 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "explorer.sortOrder": "type",
   "files.autoSave": "afterDelay",

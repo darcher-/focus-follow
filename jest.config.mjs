@@ -10,7 +10,7 @@ export default {
   setupFilesAfterEnv: ["./src/resources/scripts/jest.setup.js"],
   moduleFileExtensions: ["js"],
   testEnvironment: "jsdom",
-  testMatch: ["*.test.js", "**/*.test.js"],
+  testMatch: ["*.(spec|test).js", "**/*.(spec|test).js"],
   // moduleNameMapper: { "\\.(c|sa)ss$": "src/**/*.fixture.js" },
   transform: { "\\.[jt]sx?$": "babel-jest" },
   verbose: true,

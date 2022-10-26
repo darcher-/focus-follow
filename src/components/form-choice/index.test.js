@@ -1,4 +1,5 @@
-import Choice from ".";
+/*global afterEach, jest, it, expect, describe */
+import { attach } from ".";
 
 afterEach(() => {
   jest.clearAllMocks();
@@ -6,12 +7,12 @@ afterEach(() => {
 
 describe("Choice element module", () => {
   it("renders empty string when undefined", () => {
-    expect(Choice.attach()).toBe("");
+    expect(attach()).toBe("");
   });
 
   it("renders html-string of choice field", () => {
     expect(
-      Choice.attach({
+      attach({
         label: "Radio one label",
         id: "Z1",
         name: "_z",
@@ -24,61 +25,61 @@ describe("Choice element module", () => {
 
   it("renders html-string of choice field with classing", () => {
     expect(
-      Choice.attach({
+      attach({
         label: "Radio one label",
         id: "Z1",
         type: "checkbox",
         value: "z1",
         className: "test-btn btn-submit",
-        classList: ["test-btn", "btn-submit"],
+        classes: ["test-btn", "btn-submit"],
       })
     ).toContain("choice test-btn btn-submit");
   });
 
   it("renders html-string of class", () => {
     expect(
-      Choice.attach({
+      attach({
         label: "Radio one label",
         id: "Z1",
         type: "radio",
         disabled: true,
         value: "z1",
         className: "test-btn btn-submit",
-        classList: ["test-btn", "btn-submit"],
+        classes: ["test-btn", "btn-submit"],
       })
     ).toContain("choice test-btn btn-submit");
   });
 
   it("removes # from id string and replaces it", () => {
     expect(
-      Choice.attach({
+      attach({
         label: "Radio one label",
         id: "#Z1",
         type: "checkbox",
         disabled: true,
         value: "z1",
         className: "test-btn btn-submit",
-        classList: ["test-btn", "btn-submit"],
+        classes: ["test-btn", "btn-submit"],
       })
     ).toContain('for="Z1"');
   });
 
   it("does not render when missing label", () => {
     expect(
-      Choice.attach({
+      attach({
         id: "Z1",
         type: "checkbox",
         checked: true,
         value: "z1",
         className: "test-btn btn-submit",
-        classList: ["test-btn", "btn-submit"],
+        classes: ["test-btn", "btn-submit"],
       })
     ).toBe("");
   });
 
   it("does not render when missing id", () => {
     expect(
-      Choice.attach({
+      attach({
         label: "Label text",
         type: "option",
         value: "z1",
@@ -89,7 +90,7 @@ describe("Choice element module", () => {
 
   it("returns an option html-string when type is option", () => {
     expect(
-      Choice.attach({
+      attach({
         disabled: true,
         label: "Label text",
         id: "Z1",
@@ -116,7 +117,7 @@ describe("Choice element module", () => {
           label: "checkbox label",
         },
       ]
-        .map(Choice.attach)
+        .map(attach)
         .join("")
     );
 

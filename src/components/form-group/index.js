@@ -1,37 +1,19 @@
-import Util from "../../services/helper";
-import Icon from "../icon";
+import { assign, bundle, verify } from "../../services/helper";
+import "./style";
 
 export default {
-  attach({
-    classList = [],
-    className = "",
-    id,
-    label,
-    role = "group",
-    innerHTML,
-    tagName = "fieldset",
-    svgIconId = "#field-group",
-    ...props
-  } = {}) {
-    const tag = tagName === "fieldset" ? "legend" : "span";
-
-    return Util.verify(
-      innerHTML,
-      `
-        <${tagName} ${Util.assign({
-        ...props,
-        class: Util.bundle([
-          "group",
-          ...classList,
-          ...className.split(" "),
-        ]),
-        id,
-        role,
-      })}>
-        ${Util.verify(svgIconId, Icon.attach({ svgIconId }))}
-        ${Util.verify(label, `<${tag} class="label">${label}</${tag}>`)}
-        ${innerHTML}
-      </${tagName}>`
+  attach({ children, icon, label, ...etc } = {}) {
+    return verify(
+      0 < children?.length,
+      `<div
+        ${assign({
+          ...etc,
+          class: bundle(["group", ...etc.classes]),
+        })}>
+        ${verify(null != icon?.id, icon)}
+        ${verify(null != label?.text, label)}
+        ${children}
+      </div>`
     );
   },
 };
