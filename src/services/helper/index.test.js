@@ -45,10 +45,10 @@ describe("Util method", () => {
     });
   });
 
-  describe("MakeStringNode", () => {
+  describe("booleanProperty", () => {
     it("renders value when condition succeeds", () => {
       expect(
-        Util.makeStringNode(
+        Util.booleanProperty(
           true,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -56,7 +56,7 @@ describe("Util method", () => {
     });
     it("renders empty string  when condition fails", () => {
       expect(
-        Util.makeStringNode(
+        Util.booleanProperty(
           false,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
