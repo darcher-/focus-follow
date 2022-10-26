@@ -24,7 +24,7 @@ export default {
             ]),
             "data-disabled": disabled,
             "data-type": type,
-            for: Util.removeFromString(svgIconId, "#"),
+            for: Util.removeFromString(id, "#"),
           })}>
           ${Icon.makeComponent({ svgIconId })}
           <span class="label">${label}</span>
