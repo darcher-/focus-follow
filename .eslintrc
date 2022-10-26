@@ -4,12 +4,6 @@
     "browser": true,
     "es2022": true
   },
-  "plugins": ["flowtype"],
-  "extends": [
-    "eslint-config-prettier",
-    "eslint:recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
   "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
   "parserOptions": {
     "ecmaVersion": 12,
