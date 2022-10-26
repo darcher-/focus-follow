@@ -23,13 +23,15 @@ describe("Util method", () => {
     });
 
     it("renders empty string when set it empty string", () => {
-      expect(Util.buildText({ set: "btn:default" })).toBe("btn:default");
+      expect(Util.buildText({ set: "btn:default" })).toBe(
+        "btn:default"
+      );
     });
 
     it("renders items of array", () => {
-      expect(Util.buildText({ set: ["btn:outlined", "btn:rounded"] })).toBe(
-        "btn:outlined btn:rounded"
-      );
+      expect(
+        Util.buildText({ set: ["btn:outlined", "btn:rounded"] })
+      ).toBe("btn:outlined btn:rounded");
     });
 
     it("renders items of array with prefix", () => {
@@ -45,10 +47,10 @@ describe("Util method", () => {
     });
   });
 
-  describe("booleanProperty", () => {
+  describe("verify", () => {
     it("renders value when condition succeeds", () => {
       expect(
-        Util.booleanProperty(
+        Util.verify(
           true,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -56,7 +58,7 @@ describe("Util method", () => {
     });
     it("renders empty string  when condition fails", () => {
       expect(
-        Util.booleanProperty(
+        Util.verify(
           false,
           `<div class="${["test", "element"].join("-")}">Test</div>`
         )
@@ -64,10 +66,10 @@ describe("Util method", () => {
     });
   });
 
-  describe("MakeAttributes", () => {
+  describe("assign", () => {
     it("creates html-string attributes from object", () => {
       expect(
-        Util.makeAttributes({
+        Util.assign({
           class: "class-name",
           id: "some-id",
           role: "button",
@@ -76,10 +78,10 @@ describe("Util method", () => {
     });
   });
 
-  describe("ArrayToString", () => {
+  describe("bundle", () => {
     it("creates a deduplicated string from an array", () => {
       expect(
-        Util.arrayToString(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])
+        Util.bundle(["a", "a", "b", "c", "d", 1, 2, "3", "3", 2, "c"])
       ).toBe("a b c d 1 2 3");
     });
   });
@@ -101,17 +103,17 @@ describe("Util method", () => {
     });
   });
 
-  describe("removeFromString", () => {
+  describe("discard", () => {
     it("removes character from string", () => {
-      expect(Util.removeFromString("#test", "#")).toBe("test");
+      expect(Util.discard("#test", "#")).toBe("test");
     });
 
     it("cannot remove character from null", () => {
-      expect(Util.removeFromString(null, "#")).toBe(null);
+      expect(Util.discard(null, "#")).toBe(null);
     });
 
     it("cannot remove null from string", () => {
-      expect(Util.removeFromString("#test", null)).toBe("#test");
+      expect(Util.discard("#test", null)).toBe("#test");
     });
   });
 });

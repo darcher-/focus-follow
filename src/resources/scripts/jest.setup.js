@@ -1,10 +1,9 @@
 import "@testing-library/jest-dom";
 import "@testing-library/dom";
 
-// const logErr = globa.console.error;
+const logErr = global.console.error;
 
-// global.console.error = ({ msg, ...props } = {}) => {
-//   const { msg } = args;
-//   logErr({ ...props, msg });
-//   throw msg instanceof Error ? msg : new Error(msg);
-// };
+global.console.error = ({ msg, ...props } = {}) => {
+  logErr({ ...props, msg });
+  throw msg instanceof Error ? msg : new Error(msg);
+};

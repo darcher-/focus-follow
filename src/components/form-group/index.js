@@ -2,7 +2,7 @@ import Util from "../../services/helper";
 import Icon from "../icon";
 
 export default {
-  makeComponent({
+  attach({
     classList = [],
     className = "",
     id,
@@ -15,12 +15,12 @@ export default {
   } = {}) {
     const tag = tagName === "fieldset" ? "legend" : "span";
 
-    return Util.booleanProperty(
+    return Util.verify(
       innerHTML,
       `
-        <${tagName} ${Util.makeAttributes({
+        <${tagName} ${Util.assign({
         ...props,
-        class: Util.arrayToString([
+        class: Util.bundle([
           "group",
           ...classList,
           ...className.split(" "),
@@ -28,11 +28,8 @@ export default {
         id,
         role,
       })}>
-        ${Util.booleanProperty(svgIconId, Icon.makeComponent({ svgIconId }))}
-        ${Util.booleanProperty(
-          label,
-          `<${tag} class="label">${label}</${tag}>`
-        )}
+        ${Util.verify(svgIconId, Icon.attach({ svgIconId }))}
+        ${Util.verify(label, `<${tag} class="label">${label}</${tag}>`)}
         ${innerHTML}
       </${tagName}>`
     );

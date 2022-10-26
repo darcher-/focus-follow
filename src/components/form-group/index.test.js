@@ -6,11 +6,12 @@ afterEach(() => {
 
 describe("Icon element module", () => {
   it("empty string if args are undefined", () => {
-    expect(Group.makeComponent()).toBe("");
+    expect(Group.attach()).toBe("");
   });
+
   it("fieldset group", () => {
     expect(
-      Group.makeComponent({
+      Group.attach({
         id: "test-1",
         label: "text content",
         innerHTML: `<span class="something">test</span>`,
@@ -20,9 +21,10 @@ describe("Icon element module", () => {
         <span class="something">test</span>
       </fieldset>`);
   });
+
   it("div group", () => {
     expect(
-      Group.makeComponent({
+      Group.attach({
         id: "test-1",
         label: "text content",
         tagName: "div",

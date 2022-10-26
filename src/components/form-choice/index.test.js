@@ -6,11 +6,12 @@ afterEach(() => {
 
 describe("Choice element module", () => {
   it("renders empty string when undefined", () => {
-    expect(Choice.makeComponent()).toBe("");
+    expect(Choice.attach()).toBe("");
   });
+
   it("renders html-string of choice field", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         name: "_z",
@@ -20,9 +21,10 @@ describe("Choice element module", () => {
       })
     ).toContain("Radio one label");
   });
+
   it("renders html-string of choice field with classing", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         type: "checkbox",
@@ -32,9 +34,10 @@ describe("Choice element module", () => {
       })
     ).toContain("choice test-btn btn-submit");
   });
+
   it("renders html-string of class", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "Z1",
         type: "radio",
@@ -45,9 +48,10 @@ describe("Choice element module", () => {
       })
     ).toContain("choice test-btn btn-submit");
   });
+
   it("removes # from id string and replaces it", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Radio one label",
         id: "#Z1",
         type: "checkbox",
@@ -58,9 +62,10 @@ describe("Choice element module", () => {
       })
     ).toContain('for="Z1"');
   });
+
   it("does not render when missing label", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         id: "Z1",
         type: "checkbox",
         checked: true,
@@ -70,9 +75,10 @@ describe("Choice element module", () => {
       })
     ).toBe("");
   });
+
   it("does not render when missing id", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         label: "Label text",
         type: "option",
         value: "z1",
@@ -80,9 +86,10 @@ describe("Choice element module", () => {
       })
     ).toBe("");
   });
+
   it("returns an option html-string when type is option", () => {
     expect(
-      Choice.makeComponent({
+      Choice.attach({
         disabled: true,
         label: "Label text",
         id: "Z1",
@@ -91,6 +98,7 @@ describe("Choice element module", () => {
       })
     ).toContain('<option value="z1" class="field"');
   });
+
   it("returns an option html-string when type is an option", () => {
     document.body.insertAdjacentHTML(
       "beforeend",
@@ -108,7 +116,7 @@ describe("Choice element module", () => {
           label: "checkbox label",
         },
       ]
-        .map(Choice.makeComponent)
+        .map(Choice.attach)
         .join("")
     );
 

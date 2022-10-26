@@ -1,41 +1,44 @@
+// utilities & helpers
+
 export default {
-  booleanProperty(condition, value) {
-    return condition ? value : "";
+  assign(props) {
+    return `${Object.entries(props)
+      .map(([key, value]) => (value ? `${key}="${value}"` : ""))
+      .join(" ")}`;
   },
 
-  removeFromString(value, target) {
-    return value && value.includes(target) ? value.replace(target, "") : value;
+  bundle(list) {
+    return [...new Set(list)].join(" ").trim();
   },
 
-  buildText({
+  compile({
     delimiter = " ",
     prefix = "",
     suffix = "",
     set = "", // or []
   } = {}) {
-    return this.booleanProperty(
+    return this.verify(
       set && set.length,
       Array.isArray(set)
-        ? set.map((txt) => `${prefix}${txt}${suffix}`).join(delimiter)
-        : `${prefix}${set}${suffix}`
+        ? set.map(txt => `${prefix + txt + suffix}`).join(delimiter)
+        : `${prefix + set + suffix}`
     );
   },
 
-  makeAttributes(props) {
-    return `${Object.entries(props)
-      .map(([key, value]) => `${key}="${value}"`)
-      .join(" ")}`;
+  discard(value, target) {
+    return value != null && value.includes(target)
+      ? value.replace(target, "")
+      : value;
   },
 
-  arrayToString(list) {
-    return [...new Set(list)].join(" ").trim();
-  },
-
-  deepFreeze(obj = {}) {
+  freeze(obj = {}) {
     Object.entries(obj).reduce(
       (acc, [key, value]) => ({
         ...acc,
-        [key]: value && typeof value === "object" ? this.deepFreeze() : value,
+        [key]:
+          value && typeof value === "object"
+            ? this.deepFreeze()
+            : value,
       }),
       {}
     );
@@ -43,7 +46,11 @@ export default {
     return Object.freeze(obj);
   },
 
-  randomInt() {
+  random() {
     return Math.round(Math.round() * 999);
+  },
+
+  verify(condition, value) {
+    return condition ? value : "";
   },
 };

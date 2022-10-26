@@ -2,7 +2,7 @@ import Util from "../../services/helper";
 import Icon from "../icon";
 
 export default {
-  makeComponent({
+  attach({
     classList = [],
     className = "",
     disabled = false,
@@ -12,31 +12,31 @@ export default {
     type = "text",
     ...props
   } = {}) {
-    return Util.booleanProperty(
+    return Util.verify(
       label && id,
       `
         <label
-          ${Util.makeAttributes({
-            class: Util.arrayToString([
+          ${Util.assign({
+            "class": Util.bundle([
               "input",
               ...classList,
               ...className.split(" "),
             ]),
             "data-disabled": disabled,
             "data-type": type,
-            for: Util.removeFromString(id, "#"),
+            "for": Util.discard(id, "#"),
           })}>
-          ${Icon.makeComponent({ svgIconId })}
+          ${Icon.attach({ svgIconId })}
           <span class="label">${label}</span>
           <input
-            ${Util.makeAttributes({
+            ${Util.assign({
               ...props,
               class: "field",
               type,
               label,
               id,
             })}
-            ${Util.booleanProperty(disabled, "disabled")}
+            ${Util.verify(disabled, "disabled")}
           />
         </label>
       `

@@ -7,19 +7,9 @@
   "plugins": ["flowtype"],
   "extends": [
     "eslint-config-prettier",
-    "eslint-config-with-prettier",
     "eslint:recommended",
     "plugin:jsx-a11y/recommended"
   ],
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {},
-      {
-        "usePrettierrc": false
-      }
-    ]
-  },
   "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
   "parserOptions": {
     "ecmaVersion": 12,

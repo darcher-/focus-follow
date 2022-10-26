@@ -1,7 +1,7 @@
 import Util from "../../services/helper";
 
 export default {
-  makeComponent({
+  attach({
     classList = [],
     className = "",
     id,
@@ -10,12 +10,12 @@ export default {
     subtitle,
     ...props
   } = {}) {
-    return Util.booleanProperty(
+    return Util.verify(
       title && subtitle,
       `
-        <header ${Util.makeAttributes({
+        <header ${Util.assign({
           ...props,
-          class: Util.arrayToString([
+          class: Util.bundle([
             "header",
             ...classList,
             ...className.split(" "),

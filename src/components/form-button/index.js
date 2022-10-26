@@ -2,22 +2,22 @@ import Util from "../../services/helper";
 import Icon from "../icon";
 
 export default {
-  makeComponent({
+  attach({
     className = "",
     classList = [],
-    btnIconId = "#icon-mouse",
-    innerText = null,
+    btnIconId,
+    innerText,
     role = "button",
     type = "button",
     ...attributes
   } = {}) {
-    return Util.booleanProperty(
+    return Util.verify(
       innerText != null,
       `
       <button
-        ${Util.makeAttributes({
+        ${Util.assign({
           ...attributes,
-          class: Util.arrayToString([
+          class: Util.bundle([
             "button",
             ...classList,
             ...className.split(" "),
@@ -26,7 +26,7 @@ export default {
           type,
         })}
       >
-        ${Icon.makeComponent({ className: "icon", svgIconId: btnIconId })}
+        ${Icon.attach({ className: "icon", svgIconId: btnIconId })}
         <span class="label">${innerText}</span>
       </button>
     `
