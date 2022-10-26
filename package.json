@@ -32,11 +32,11 @@
     "stylelint": "14.14.0"
   },
   "lint-staged": {
-    "*.test.{js,ts,mjs,cjs,jsx,tsx}": "jest --coverage --no-cache",
-    "*.{js,ts,mjs,cjs,jsx,tsx,json}": "eslint --fix",
-    "*.{xml,svg,htm,html}": "prettier --write",
-    "*.{css,scss,sass,less}": "stylelint --fix",
-    "*": "git add -A"
+    "src/**/*.test.{js,ts,mjs,cjs,jsx,tsx}": "jest --coverage --no-cache",
+    "src/**/*.{js,ts,mjs,cjs,jsx,tsx,json}": "eslint --fix",
+    "src/**/*.{xml,svg,htm,html}": "prettier --write",
+    "src/**/*.{css,scss,sass,less}": "stylelint --fix",
+    "src/**/*": "git add -A"
   },
   "license": "UNLICENSED",
   "name": "focus-follow",
