@@ -39,8 +39,8 @@
     "stylelint-order": "5.0.0"
   },
   "lint-staged": {
-    "*.{js,mjs,json,jsonc,json5}": "eslint --fix",
-    "*.{svg,html,md}": "prettier --write",
+    "*.(js|mjs|json)": "eslint --fix",
+    "*.(svg|html|md)}": "prettier --write",
     "*.css": "stylelint --fix"
   },
   "license": "UNLICENSED",
@@ -52,8 +52,8 @@
   },
   "scripts": {
     "cypress": "cypress open",
-    "eslint": "eslint --quiet \"**/*.{js,mjs,json}\"",
-    "prettier": "prettier --check \"**/*.{svg,html}\"",
+    "eslint": "eslint --quiet \"**/*.(js|mjs|json)\"",
+    "prettier": "prettier --check \"**/*.(svg|html|md)\"",
     "stylelint": "stylelint \"**/*.css\"",
     "test": "jest --coverage --no-cache && jest-coverage-badge",
     "commits": "git log --pretty=\"- %s\" > CHANGELOG.md"

@@ -1,13 +1,17 @@
 # focus-follow
 
-This library creates a node to pursue the `document.activeElement` state, allowing keyboard users to visualize their active `:focus` location and track the transition between two focusable nodes while interacting with a website as a keyboard user.
+This library creates a node to pursue the `document.activeElement`
+state, allowing keyboard users to visualize their active `:focus`
+location and track the transition between two focusable nodes while
+interacting with a website as a keyboard user.
 
 | ![badge](https://user-images.githubusercontent.com/984251/197894794-eed8b6b3-73b5-4357-b870-064e6f57fa19.svg) |
 | ------------------------------------------------------------------------------------------------------------- |
 
 #### Predefined scripts
 
-Limits mundane tasks via automation, `pre-commit` hooks, and `git` actions, tests & linting.
+Limits mundane tasks via automation, `pre-commit` hooks, and `git`
+actions, tests & linting.
 
 ```sh
 # lint all files
