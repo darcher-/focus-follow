@@ -3,11 +3,6 @@
     "name": "Dylan Archer",
     "email": "dylarcher@gmail.com"
   },
-  "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "> 0.2%"
-  ],
   "dependencies": {
     "@babel/preset-env": "7.19.4",
     "cypress": "10.11.0",
