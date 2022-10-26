@@ -1,6 +1,4 @@
 {
-  "extends": "stylelint-config-standard",
-  "plugins": ["stylelint-order"],
   "configBasedir": ".",
   "ignoreFiles": [
     "**/*.{js,mjs,json}",
