@@ -1,4 +1,4 @@
-import { verify, assign, bundle } from "../../services/helper";
+import { verify, assign, bundle } from "../../services/helper.service";
 import "./style";
 
 // TODO: establish structure for children

@@ -34,5 +34,9 @@
   "prettier.stylelintIntegration": true,
   "workbench.editor.highlightModifiedTabs": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.documentSelectors": ["**/*.svg"]
+  "prettier.documentSelectors": ["**/*.svg"],
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true
 }

@@ -2,9 +2,10 @@
 
 export default {
   assign(props = {}) {
-    return `${Object.entries(props)
-      .map(([key, value]) => (value ? `${key}="${value}"` : ""))
-      .join(" ")}`;
+    return Object.entries(props)
+      .map(([key, value]) => (null != value ? `${key}="${value}"` : ""))
+      .sort()
+      .join(" ");
   },
 
   bundle(list = []) {
@@ -51,6 +52,32 @@ export default {
   },
 
   verify(condition = false, value = "") {
-    return condition ? value : "";
+    return condition ? this.bundle(value) : "";
+  },
+
+  trim(html = "") {
+    return html.replace(/>\s+|\s+</g, (value = "") => value.trim());
+  },
+
+  romanYear(num = new Date().getFullYear()) {
+    return Object.entries({
+      M: 1000,
+      CM: 900,
+      D: 500,
+      CD: 400,
+      C: 100,
+      XC: 90,
+      L: 50,
+      XL: 40,
+      X: 10,
+      IX: 9,
+      V: 5,
+      IV: 4,
+      I: 1,
+    }).reduce((acc, [key, value]) => {
+      const multiplier = Math.floor(num / value);
+      num -= multiplier * value;
+      return `${acc + key.repeat(multiplier)}`;
+    }, "");
   },
 };

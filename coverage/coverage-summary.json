@@ -1,63 +1,13 @@
-{
-  "total": {
-    "lines": { "total": 28, "covered": 28, "skipped": 0, "pct": 100 },
-    "statements": { "total": 28, "covered": 28, "skipped": 0, "pct": 100 },
-    "functions": { "total": 18, "covered": 18, "skipped": 0, "pct": 100 },
-    "branches": { "total": 65, "covered": 65, "skipped": 0, "pct": 100 },
-    "branchesTrue": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/index.js": {
-    "lines": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-    "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
-    "statements": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-    "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/footer/index.js": {
-    "lines": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "branches": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/form-button/index.js": {
-    "lines": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "branches": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/form-choice/index.js": {
-    "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
-    "functions": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-    "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
-    "branches": { "total": 9, "covered": 9, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/form-group/index.js": {
-    "lines": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-    "branches": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/form-input/index.js": {
-    "lines": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "branches": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/header/index.js": {
-    "lines": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "branches": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/components/icon/index.js": {
-    "lines": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "statements": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-    "branches": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 }
-  },
-  "/Users/darcher/dev/apps/focus-follow/src/services/helper/index.js": {
-    "lines": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
-    "functions": { "total": 10, "covered": 10, "skipped": 0, "pct": 100 },
-    "statements": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
-    "branches": { "total": 20, "covered": 20, "skipped": 0, "pct": 100 }
-  }
+{"total": {"lines":{"total":29,"covered":13,"skipped":0,"pct":44.82},"statements":{"total":30,"covered":14,"skipped":0,"pct":46.66},"functions":{"total":21,"covered":9,"skipped":0,"pct":42.85},"branches":{"total":42,"covered":7,"skipped":0,"pct":16.66},"branchesTrue":{"total":0,"covered":0,"skipped":0,"pct":100}}
+,"/Users/darcher/dev/apps/focus-follow/src/index.js": {"lines":{"total":2,"covered":0,"skipped":0,"pct":0},"functions":{"total":0,"covered":0,"skipped":0,"pct":100},"statements":{"total":2,"covered":0,"skipped":0,"pct":0},"branches":{"total":0,"covered":0,"skipped":0,"pct":100}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/footer/fixtures.js": {"lines":{"total":0,"covered":0,"skipped":0,"pct":100},"functions":{"total":0,"covered":0,"skipped":0,"pct":100},"statements":{"total":0,"covered":0,"skipped":0,"pct":100},"branches":{"total":0,"covered":0,"skipped":0,"pct":100}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/footer/index.js": {"lines":{"total":1,"covered":1,"skipped":0,"pct":100},"functions":{"total":1,"covered":1,"skipped":0,"pct":100},"statements":{"total":1,"covered":1,"skipped":0,"pct":100},"branches":{"total":3,"covered":3,"skipped":0,"pct":100}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/footer/style.css": {"lines":{"total":3,"covered":3,"skipped":0,"pct":100},"functions":{"total":0,"covered":0,"skipped":0,"pct":100},"statements":{"total":3,"covered":3,"skipped":0,"pct":100},"branches":{"total":0,"covered":0,"skipped":0,"pct":100}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/form-button/index.js": {"lines":{"total":1,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":1,"covered":0,"skipped":0,"pct":0},"branches":{"total":1,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/form-choice/index.js": {"lines":{"total":2,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":2,"covered":0,"skipped":0,"pct":0},"branches":{"total":3,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/form-group/index.js": {"lines":{"total":1,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":1,"covered":0,"skipped":0,"pct":0},"branches":{"total":1,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/form-input/index.js": {"lines":{"total":1,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":1,"covered":0,"skipped":0,"pct":0},"branches":{"total":3,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/header/index.js": {"lines":{"total":1,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":1,"covered":0,"skipped":0,"pct":0},"branches":{"total":2,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/components/icon/index.js": {"lines":{"total":1,"covered":0,"skipped":0,"pct":0},"functions":{"total":1,"covered":0,"skipped":0,"pct":0},"statements":{"total":1,"covered":0,"skipped":0,"pct":0},"branches":{"total":1,"covered":0,"skipped":0,"pct":0}}
+,"/Users/darcher/dev/apps/focus-follow/src/services/helper.service.js": {"lines":{"total":16,"covered":9,"skipped":0,"pct":56.25},"functions":{"total":14,"covered":8,"skipped":0,"pct":57.14},"statements":{"total":17,"covered":10,"skipped":0,"pct":58.82},"branches":{"total":28,"covered":4,"skipped":0,"pct":14.28}}
 }
