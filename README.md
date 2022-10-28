@@ -10,37 +10,32 @@ state, allowing keyboard users to visualize their active `:focus`
 location and track the transition between two focusable nodes while
 interacting with a website as a keyboard user.
 
-#### Predefined scripts
+### Predefined scripts
 
 Limits mundane tasks via automation, `pre-commit` hooks, and `git`
 actions, tests & linting.
 
+
 ```sh
-# lint all files
-yarn run lint
+# cypress open
+yarn cypress
 
-# lint styles
-yarn run lint:css
+# eslint src --quiet --fix --ext .js,mjs
+yarn eslint
+yarn run eslint --fix
 
-# lint data & scripts
-yarn run lint:js
+# prettier --check \"src/**/*.(svg|html|md|json)\
+yarn prettier
+yarn run prettier --write
 
-# view lint report
-yarn run lint:view
+# stylelint \"src/**/*.css\"
+yarn stylelint
+yarn run stylelint --fix
 
-# jest tests & coverage badge svg
-yarn run test
+# jest --coverage --no-cache && jest-coverage-badge
+yarn test
 
-# cypress tests
-yarn run test:cy
-
-# jest tests
-yarn run test:jest
-
-# generate coverage badge svg
-yarn run test:badge
-
-# `pre-commit` hook (only tests/lints staged files)
-yarn run lint-staged
-
+# git log --pretty=\"- %s\" > CHANGELOG.md
+yarn commits
 ```
+
