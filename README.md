@@ -37,5 +37,8 @@ yarn test
 
 # git log --pretty=\"- %s\" > CHANGELOG.md
 yarn commits
+
+# yarn eslint --fix && yarn prettier --write && yarn stylelint --fix
+yarn lint-staged
 ```
 
