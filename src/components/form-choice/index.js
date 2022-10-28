@@ -1,5 +1,5 @@
-import { assign, bundle, verify } from "../../services/helper";
-import "./style";
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 // TODO: make icon dynamic with fallback
 // TODO: create a label component
@@ -7,31 +7,25 @@ import "./style";
 // TODO: create an option component?
 
 export default {
-  attach({ classes, disabled, id, label, type, ...etc } = {}) {
-    const attr = assign({ ...etc, class: "field", type, id });
+  attach({ classes = [], id, label, type, ...etc } = {}) {
+    const attr = util.assign({ ...etc, class: "field", type, id });
 
-    return verify(
+    return util.verify(
       null != (id || label),
-      bundle([
-        verify(
+      util.bundle([
+        util.verify(
           ["radio", "checkbox"].includes(type),
-          `<label
-            ${assign({ class: bundle(["choice", ...classes]) })}>
-            <input
-              ${attr}
-              ${verify(disabled, "disabled")}
-              hidden />
+          `<label ${util.assign({
+            class: util.bundle(["choice", ...classes]),
+          })}>
+            <input ${attr} hidden />
             <span class="mark" aria-hidden="true"></span>
             ${label}
           </label>`
         ),
-        verify(
+        util.verify(
           type == "option",
-          `<option
-            ${attr}
-            ${verify(disabled, "disabled")}>
-            ${label}
-          </option>`
+          `<option ${attr}>${label}</option>`
         ),
       ])
     );

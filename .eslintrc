@@ -5,7 +5,6 @@
     "es2022": true
   },
   "globals": { "focus-follow": true },
-  "plugins": ["eslint-plugin-json"],
   "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
   "parserOptions": {
     "ecmaVersion": 12,

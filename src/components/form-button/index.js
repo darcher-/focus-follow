@@ -1,17 +1,19 @@
-import { verify, assign, bundle } from "../../services/helper.service";
-import "./style";
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 // TODO: establish structure for children
 
 export default {
-  attach({ classes, icon, label, ...etc } = {}) {
-    return `<button
-      ${assign({
+  attach({ classes = [], icon, label, ...etc } = {}) {
+    return util.verify(
+      null != label,
+      `<button ${util.assign({
         ...etc,
-        class: bundle(["button", ...classes]),
+        class: util.bundle(["button", ...classes]),
       })}>
-      ${verify(null != icon, icon)}
-      ${verify(null != label, label)}
-    </button>`;
+        ${util.verify(null != icon, icon)}
+        ${util.verify(null != label, label)}
+      </button>`
+    );
   },
 };

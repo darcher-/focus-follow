@@ -9,21 +9,9 @@ export default {
   },
 
   bundle(list = []) {
-    return [...new Set(list)].join(" ").trim();
-  },
-
-  compile({
-    delimiter = " ",
-    prefix = "",
-    suffix = "",
-    set = "", // or []
-  } = {}) {
-    return this.verify(
-      0 < set?.length,
-      Array.isArray(set)
-        ? set.map(txt => `${prefix + txt + suffix}`).join(delimiter)
-        : `${prefix + set + suffix}`
-    );
+    return [...new Set(Array.isArray(list) ? list : [list])]
+      .join(" ")
+      .trim();
   },
 
   remove(target = "", value) {
@@ -38,7 +26,7 @@ export default {
         ...acc,
         [key]:
           null != value && "object" == typeof value
-            ? this.freeze()
+            ? this.freeze(value)
             : value,
       }),
       {}
@@ -55,8 +43,8 @@ export default {
     return condition ? this.bundle(value) : "";
   },
 
-  trim(html = "") {
-    return html.replace(/>\s+|\s+</g, (value = "") => value.trim());
+  trimHTML(html = "") {
+    return html.replace(/>\s+|\s+</g, value => value.trim());
   },
 
   romanYear(num = new Date().getFullYear()) {

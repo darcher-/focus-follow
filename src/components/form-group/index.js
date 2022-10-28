@@ -1,17 +1,16 @@
-import { assign, bundle, verify } from "../../services/helper";
-import "./style";
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 export default {
-  attach({ children, icon, label, ...etc } = {}) {
-    return verify(
+  attach({ classes = [], children = [], icon, label, ...etc } = {}) {
+    return util.verify(
       0 < children?.length,
-      `<div
-        ${assign({
-          ...etc,
-          class: bundle(["group", ...etc.classes]),
-        })}>
-        ${verify(null != icon?.id, icon)}
-        ${verify(null != label?.text, label)}
+      `<div ${util.assign({
+        ...etc,
+        class: util.bundle(["group", ...classes]),
+      })}>
+        ${util.verify(null != icon, icon)}
+        ${util.verify(null != label, label)}
         ${children}
       </div>`
     );

@@ -1,21 +1,18 @@
-import { verify, remove, bundle, assign } from "../../services/helper";
-import "./style";
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 export default {
-  attach({ icon, classes, ...etc } = {}) {
-    return verify(
-      null != icon?.id,
-      `
-        <svg
-          ${assign({
-            ...etc,
-            class: bundle(["icon", ...classes]),
-            focusable: "false",
-            role: "img",
-          })}
-        >
-          <use xlink:href="#${remove("#", icon?.id)}" />
-        </svg>
+  attach({ ref, classes = [], ...etc } = {}) {
+    return util.verify(
+      null != ref,
+      `<svg ${util.assign({
+        ...etc,
+        class: util.bundle(["icon", ...classes]),
+        focusable: "false",
+        role: "img",
+      })}>
+        <use xlink:href="#${util.remove("#", ref)}" />
+      </svg>
       `
     );
   },

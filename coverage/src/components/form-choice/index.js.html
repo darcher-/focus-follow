@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,13 +96,7 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -112,13 +106,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,10 +129,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { assign, bundle, verify } from "../../services/helper";
-import "./style";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import util from "../../services/helper.service.js";
+import "./style.css";
 &nbsp;
 // TODO: make icon dynamic with fallback
 // TODO: create a label component
@@ -150,31 +138,25 @@ import "./style";
 // TODO: create an option component?
 &nbsp;
 export default {
-<span class="fstat-no" title="function not covered" >  at</span>tach({ classes, disabled, id, label, type, ...etc } = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-    const attr = <span class="cstat-no" title="statement not covered" >assign({ ...etc, class: "field", type, id });</span>
+  attach({ classes = [], id, label, type, ...etc } = {}) {
+    const attr = util.assign({ ...etc, class: "field", type, id });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return verify(</span>
+    return util.verify(
       null != (id || label),
-      bundle([
-        verify(
+      util.bundle([
+        util.verify(
           ["radio", "checkbox"].includes(type),
-          `&lt;label
-            ${assign({ class: bundle(["choice", ...classes]) })}&gt;
-            &lt;input
-              ${attr}
-              ${verify(disabled, "disabled")}
-              hidden /&gt;
+          `&lt;label ${util.assign({
+            class: util.bundle(["choice", ...classes]),
+          })}&gt;
+            &lt;input ${attr} hidden /&gt;
             &lt;span class="mark" aria-hidden="true"&gt;&lt;/span&gt;
             ${label}
           &lt;/label&gt;`
         ),
-        verify(
+        util.verify(
           type == "option",
-          `&lt;option
-            ${attr}
-            ${verify(disabled, "disabled")}&gt;
-            ${label}
-          &lt;/option&gt;`
+          `&lt;option ${attr}&gt;${label}&lt;/option&gt;`
         ),
       ])
     );
@@ -187,7 +169,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-27T18:13:14.308Z
+                at 2022-10-28T15:52:22.093Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
