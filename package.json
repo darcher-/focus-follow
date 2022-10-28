@@ -39,8 +39,8 @@
     "postcss": "8.4.18"
   },
   "lint-staged": {
-    "*.(js|mjs|json)": "eslint --fix",
-    "*.(svg|html|md)}": "prettier --write",
+    "*.(js|mjs)": "eslint --fix",
+    "*.(svg|html|md|json)}": "prettier --write",
     "*.css": "stylelint --fix"
   },
   "license": "UNLICENSED",
