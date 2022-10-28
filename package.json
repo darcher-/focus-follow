@@ -53,7 +53,7 @@
   "scripts": {
     "cypress": "cypress open",
     "eslint": "eslint src --quiet --ext .js,mjs,json",
-    "prettier": "prettier --check \"src/**/*.(svg|html|md)\"",
+    "prettier": "prettier --check \"src/**/*.(svg|html|md|json)\"",
     "stylelint": "stylelint \"src/**/*.css\"",
     "test": "jest --coverage --no-cache && jest-coverage-badge",
     "commits": "git log --pretty=\"- %s\" > CHANGELOG.md"
