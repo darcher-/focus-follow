@@ -35,6 +35,10 @@
     "stylelint-config-standard": "29.0.0",
     "stylelint-order": "5.0.0"
   },
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.19"
+  },
   "peerDependencies": {
     "postcss": "8.4.18"
   },
