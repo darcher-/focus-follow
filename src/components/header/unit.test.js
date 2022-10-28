@@ -1,15 +1,15 @@
-import node from ".";
+import { attach } from ".";
 import mock from "./mock.fixture.js";
-import util from "../../services/helper.service.js";
+import { trimHTML } from "../../services/mutate";
 
 describe("<Header />", () => {
   it("Returns default header", () => {
-    expect(util.trimHTML(node.attach())).toBe("");
+    expect(trimHTML(attach())).toBe("");
   });
 
   it("Returns footer with properties", () => {
-    expect(util.trimHTML(node.attach(mock))).toBe(
-      util.trimHTML(`
+    expect(trimHTML(attach(mock))).toBe(
+      trimHTML(`
         <header class="header class-test" id="id-test">
           <h1>Title test</h1>
           <span>Children test</span>

@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv";
 
-import Button from "./components/form-button";
+import { attach } from "./components/form-button";
 
 // TODO: setup `until-found` hidden states
 // TODO: use `templates` api for HTML Modules
@@ -8,4 +8,4 @@ import Button from "./components/form-button";
 
 dotenv.config();
 
-document.body.insertAdjacentHTML("beforeend", Button.attach());
+document.body.insertAdjacentHTML("beforeend", attach());

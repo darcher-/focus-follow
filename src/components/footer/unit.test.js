@@ -1,9 +1,9 @@
-import node from ".";
+import { attach } from ".";
 import mock from "./mock.fixture.js";
-import util from "../../services/helper.service.js";
+import { trimHTML } from "../../services/mutate";
 
 /**
- * NOTE: util.trimHTML()
+ * NOTE: trimHTML()
  * a utility method used
  * to remove whitespace
  * for easier comparisons.
@@ -11,8 +11,8 @@ import util from "../../services/helper.service.js";
 
 describe("<Footer />", () => {
   it("Returns default footer", () => {
-    expect(util.trimHTML(node.attach())).toBe(
-      util.trimHTML(`
+    expect(trimHTML(attach())).toBe(
+      trimHTML(`
         <footer class="footer">
           <p class="legal">Copyright © MMXXII</p>
         </footer>
@@ -21,8 +21,8 @@ describe("<Footer />", () => {
   });
 
   it("Returns footer with properties", () => {
-    expect(util.trimHTML(node.attach(mock))).toBe(
-      util.trimHTML(`
+    expect(trimHTML(attach(mock))).toBe(
+      trimHTML(`
         <footer aria-label="Aria label test" class="footer class-test" id="id-test">
           <span>Children test</span>
           <p class="legal">Copyright © MMXXII</p>

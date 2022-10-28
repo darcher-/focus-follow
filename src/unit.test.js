@@ -1,4 +1,4 @@
-import node from ".";
+import { attach } from ".";
 
 describe("<App />", () => {
   it("Returns default footer", () => {
