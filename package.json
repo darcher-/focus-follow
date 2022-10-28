@@ -52,7 +52,7 @@
   },
   "scripts": {
     "cypress": "cypress open",
-    "eslint": "eslint src --quiet --ext .js,mjs,json",
+    "eslint": "eslint src --quiet --ext .js,mjs",
     "prettier": "prettier --check \"src/**/*.(svg|html|md|json)\"",
     "stylelint": "stylelint \"src/**/*.css\"",
     "test": "jest --coverage --no-cache && jest-coverage-badge",
