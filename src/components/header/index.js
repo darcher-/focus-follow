@@ -1,14 +1,23 @@
-import { assign, bundle, verify } from "../../services/helper";
-import "./style";
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 export default {
-  attach({ children, text, level = 1, classes, ...etc } = {}) {
-    return `<header ${assign({
-      ...etc,
-      class: bundle(["footer", ...classes]),
-    })}>
-      <h${level}>${verify(null != text, text)}</h${level}>
-      ${verify(0 < children?.length, children)}
-    </header>`;
+  attach({
+    children = [],
+    classes = [],
+    text,
+    level = 1,
+    ...etc
+  } = {}) {
+    return util.verify(
+      null != text,
+      `<header ${util.assign({
+        ...etc,
+        class: util.bundle(["header", ...classes]),
+      })}>
+        <h${level}>${util.verify(null != text, text)}</h${level}>
+        ${util.verify(0 < children?.length, children)}
+      </header>`
+    );
   },
 };

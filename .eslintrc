@@ -4,14 +4,13 @@
     "browser": true,
     "es2022": true
   },
-  "plugins": ["flowtype"],
-  "extends": [
-    "eslint-config-prettier",
-    "eslint:recommended",
-    "plugin:jsx-a11y/recommended"
-  ],
   "globals": { "focus-follow": true },
-  "ignorePatterns": ["coverage/**/*", "dist/**/*", "node_modules/**/*"],
+  "ignorePatterns": [
+    "*.json",
+    "coverage/**/*",
+    "dist/**/*",
+    "node_modules/**/*"
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",

@@ -1,11 +1,15 @@
-import { assign, bundle, verify } from "../../services/helper";
-import "./style";
+// @flow
+import util from "../../services/helper.service.js";
+import "./style.css";
 
 export default {
-  attach({ children, classes, ...etc } = {}) {
-    return `<footer ${assign({
+  attach({ children = [], classes = [], ...etc } = {}) {
+    return `<footer ${util.assign({
       ...etc,
-      class: bundle(["footer", ...classes]),
-    })}>${verify(0 < children?.length, children)}</footer>`;
+      class: util.bundle(["footer", ...classes]),
+    })}>
+      ${util.verify(0 < children.length, children)}
+      <p class="legal">Copyright © ${util.romanYear()}</p>
+    </footer>`;
   },
 };

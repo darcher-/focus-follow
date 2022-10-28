@@ -1,35 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1666365340238" clover="3.2.0">
-  <project timestamp="1666365340238" name="All files">
-    <metrics statements="6" coveredstatements="6" conditionals="30" coveredconditionals="30" methods="4" coveredmethods="4" elements="40" coveredelements="40" complexity="0" loc="6" ncloc="6" packages="4" files="4" classes="4"/>
+<coverage generated="1666972342090" clover="3.2.0">
+  <project timestamp="1666972342090" name="All files">
+    <metrics statements="24" coveredstatements="24" conditionals="43" coveredconditionals="43" methods="19" coveredmethods="19" elements="86" coveredelements="86" complexity="0" loc="24" ncloc="24" packages="9" files="9" classes="9"/>
     <package name="src">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/index.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.module.button">
-      <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
-      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/module/button/index.js">
-        <metrics statements="2" coveredstatements="2" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="13" count="4" type="cond" truecount="4" falsecount="0"/>
+    <package name="src.components.footer">
+      <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/footer/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="src.module.icon">
-      <metrics statements="2" coveredstatements="2" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
-      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/module/icon/index.js">
-        <metrics statements="2" coveredstatements="2" conditionals="9" coveredconditionals="9" methods="1" coveredmethods="1"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="11" count="6" type="cond" truecount="4" falsecount="0"/>
+    <package name="src.components.form-button">
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/form-button/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="8" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="src.script.helper">
-      <metrics statements="2" coveredstatements="2" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
-      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/script/helper/index.js">
-        <metrics statements="2" coveredstatements="2" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
-        <line num="8" count="11" type="cond" truecount="4" falsecount="0"/>
-        <line num="10" count="4" type="stmt"/>
+    <package name="src.components.form-choice">
+      <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/form-choice/index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.form-group">
+      <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/form-group/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.form-input">
+      <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/form-input/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.header">
+      <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/header/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.icon">
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/darcher/dev/apps/focus-follow/src/components/icon/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="22" methods="12" coveredmethods="12"/>
+      <file name="helper.service.js" path="/Users/darcher/dev/apps/focus-follow/src/services/helper.service.js">
+        <metrics statements="14" coveredstatements="14" conditionals="22" coveredconditionals="22" methods="12" coveredmethods="12"/>
+        <line num="5" count="21" type="stmt"/>
+        <line num="6" count="38" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="35" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="37" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="55" type="stmt"/>
+        <line num="51" count="3" type="stmt"/>
+        <line num="66" count="39" type="stmt"/>
+        <line num="67" count="39" type="stmt"/>
+        <line num="68" count="39" type="stmt"/>
       </file>
     </package>
   </project>
