@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="31" failures="0" errors="0" time="1.788">
-  <testsuite name="&lt;Button /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.043" tests="2">
-    <testcase classname="&lt;Button /&gt; Returns default button" name="&lt;Button /&gt; Returns default button" time="0.001">
+<testsuites name="jest tests" tests="33" failures="0" errors="0" time="1.314">
+  <testsuite name="&lt;Header /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.713" tests="2">
+    <testcase classname="&lt;Header /&gt; Returns default header" name="&lt;Header /&gt; Returns default header" time="0.001">
     </testcase>
-    <testcase classname="&lt;Button /&gt; Returns button with properties" name="&lt;Button /&gt; Returns button with properties" time="0.001">
+    <testcase classname="&lt;Header /&gt; Returns footer with properties" name="&lt;Header /&gt; Returns footer with properties" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Group /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.099" tests="2">
+  <testsuite name="&lt;Group /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.762" tests="2">
     <testcase classname="&lt;Group /&gt; Returns default group" name="&lt;Group /&gt; Returns default group" time="0.001">
     </testcase>
     <testcase classname="&lt;Group /&gt; Returns group with properties" name="&lt;Group /&gt; Returns group with properties" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="Helper utility methods" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.072" tests="2">
-    <testcase classname="Helper utility methods random returns random number" name="Helper utility methods random returns random number" time="0.001">
-    </testcase>
-    <testcase classname="Helper utility methods romanYear returns roman numeral for current year" name="Helper utility methods romanYear returns roman numeral for current year" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="&lt;Footer /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.139" tests="2">
-    <testcase classname="&lt;Footer /&gt; Returns default footer" name="&lt;Footer /&gt; Returns default footer" time="0.003">
-    </testcase>
-    <testcase classname="&lt;Footer /&gt; Returns footer with properties" name="&lt;Footer /&gt; Returns footer with properties" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="Helper utility methods" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.134" tests="14">
+  <testsuite name="Helper utility methods" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.744" tests="14">
     <testcase classname="Helper utility methods assign returns empty string" name="Helper utility methods assign returns empty string" time="0.001">
     </testcase>
     <testcase classname="Helper utility methods assign returns entries as attribute strings" name="Helper utility methods assign returns entries as attribute strings" time="0">
     </testcase>
     <testcase classname="Helper utility methods bundle returns empty string" name="Helper utility methods bundle returns empty string" time="0">
     </testcase>
-    <testcase classname="Helper utility methods bundle returns unique stringified array" name="Helper utility methods bundle returns unique stringified array" time="0">
+    <testcase classname="Helper utility methods bundle returns unique stringified array" name="Helper utility methods bundle returns unique stringified array" time="0.001">
     </testcase>
     <testcase classname="Helper utility methods remove returns null" name="Helper utility methods remove returns null" time="0">
     </testcase>
-    <testcase classname="Helper utility methods remove removes character from string" name="Helper utility methods remove removes character from string" time="0.001">
+    <testcase classname="Helper utility methods remove removes character from string" name="Helper utility methods remove removes character from string" time="0">
     </testcase>
     <testcase classname="Helper utility methods remove removes character from string" name="Helper utility methods remove removes character from string" time="0">
     </testcase>
@@ -45,7 +33,7 @@
     </testcase>
     <testcase classname="Helper utility methods freeze returns frozen objects" name="Helper utility methods freeze returns frozen objects" time="0">
     </testcase>
-    <testcase classname="Helper utility methods verify returns empty string" name="Helper utility methods verify returns empty string" time="0">
+    <testcase classname="Helper utility methods verify returns empty string" name="Helper utility methods verify returns empty string" time="0.001">
     </testcase>
     <testcase classname="Helper utility methods verify returns value" name="Helper utility methods verify returns value" time="0">
     </testcase>
@@ -54,32 +42,50 @@
     <testcase classname="Helper utility methods trimHTML returns flattened html-string" name="Helper utility methods trimHTML returns flattened html-string" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Header /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.104" tests="2">
-    <testcase classname="&lt;Header /&gt; Returns default header" name="&lt;Header /&gt; Returns default header" time="0.001">
+  <testsuite name="&lt;Choice /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.8" tests="2">
+    <testcase classname="&lt;Choice /&gt; Returns default choice" name="&lt;Choice /&gt; Returns default choice" time="0.002">
     </testcase>
-    <testcase classname="&lt;Header /&gt; Returns footer with properties" name="&lt;Header /&gt; Returns footer with properties" time="0">
+    <testcase classname="&lt;Choice /&gt; Returns choice with properties" name="&lt;Choice /&gt; Returns choice with properties" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Group /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.142" tests="2">
+  <testsuite name="&lt;Group /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.8" tests="2">
     <testcase classname="&lt;Group /&gt; Returns default group" name="&lt;Group /&gt; Returns default group" time="0.001">
     </testcase>
     <testcase classname="&lt;Group /&gt; Returns group with properties" name="&lt;Group /&gt; Returns group with properties" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;Icon /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.13" tests="2">
-    <testcase classname="&lt;Icon /&gt; Returns default icon" name="&lt;Icon /&gt; Returns default icon" time="0.002">
+  <testsuite name="&lt;Button /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.803" tests="2">
+    <testcase classname="&lt;Button /&gt; Returns default button" name="&lt;Button /&gt; Returns default button" time="0.001">
     </testcase>
-    <testcase classname="&lt;Icon /&gt; Returns icon with properties" name="&lt;Icon /&gt; Returns icon with properties" time="0.001">
-    </testcase>
-  </testsuite>
-  <testsuite name="&lt;Choice /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:23" time="1.151" tests="2">
-    <testcase classname="&lt;Choice /&gt; Returns default choice" name="&lt;Choice /&gt; Returns default choice" time="0.001">
-    </testcase>
-    <testcase classname="&lt;Choice /&gt; Returns choice with properties" name="&lt;Choice /&gt; Returns choice with properties" time="0.002">
+    <testcase classname="&lt;Button /&gt; Returns button with properties" name="&lt;Button /&gt; Returns button with properties" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;App /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-28T19:12:24" time="0.191" tests="1">
-    <testcase classname="&lt;App /&gt; Returns default footer" name="&lt;App /&gt; Returns default footer" time="0.002">
+  <testsuite name="&lt;Icon /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.814" tests="2">
+    <testcase classname="&lt;Icon /&gt; Returns default icon" name="&lt;Icon /&gt; Returns default icon" time="0.001">
+    </testcase>
+    <testcase classname="&lt;Icon /&gt; Returns icon with properties" name="&lt;Icon /&gt; Returns icon with properties" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Footer /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.809" tests="2">
+    <testcase classname="&lt;Footer /&gt; Returns default footer" name="&lt;Footer /&gt; Returns default footer" time="0.002">
+    </testcase>
+    <testcase classname="&lt;Footer /&gt; Returns footer with properties" name="&lt;Footer /&gt; Returns footer with properties" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;Group /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:25" time="0.791" tests="2">
+    <testcase classname="&lt;Group /&gt; Returns default group" name="&lt;Group /&gt; Returns default group" time="0.001">
+    </testcase>
+    <testcase classname="&lt;Group /&gt; Returns group with properties" name="&lt;Group /&gt; Returns group with properties" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Helper utility methods" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:26" time="0.172" tests="2">
+    <testcase classname="Helper utility methods random returns random number" name="Helper utility methods random returns random number" time="0.001">
+    </testcase>
+    <testcase classname="Helper utility methods romanYear returns roman numeral for current year" name="Helper utility methods romanYear returns roman numeral for current year" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="&lt;App /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-10-30T16:14:26" time="0.199" tests="1">
+    <testcase classname="&lt;App /&gt; Builds App" name="&lt;App /&gt; Builds App" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>
