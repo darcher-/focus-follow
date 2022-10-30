@@ -3,21 +3,20 @@ import "./style.css";
 
 export const attach = ({
   classes = [],
-  children = [],
+  text,
   icon,
-  label,
+  tag = "label",
   ...etc
 } = {}) =>
   verify(
-    0 < children?.length,
-    `<div ${assign({
+    null != text,
+    `<${tag} ${assign({
       ...etc,
-      class: bundle(["group", ...classes]),
+      class: bundle(["label", ...classes]),
     })}>
       ${verify(null != icon, icon)}
-      ${verify(null != label, label)}
-      ${children}
-    </div>`
+      <span>${text}</span>
+    </${tag}>`
   );
 
 export default attach;

@@ -1,9 +1,54 @@
+- adjust imports to be respected
+- Update & lint
+- remove json from eslint linter
+- include json in prettier formats
+- Delete .editorconfig
+- Update README.md
+- Update README.md
+- Update README.md
+- update README.md with coverage svg's
+- update README.md coverage images
+- ignore coverage
+- Remove the now ignored directory "coverage"
+- Merge pull request #12 from darcher-/feature/fix-linters
+- configs
+- dump all
+- updates
+- move browserlist configs to rc file
+- updates
+- updates/renames
+- updates all svg/html file formats
+- update
+- Merge branch 'main' into feature/fix-linters
+- Merge pull request #11 from darcher-/linter-rehaul
+- update configs
+- include browserlist configs
+- adjust package scripts naming convention
+- limits lint-staged to src directory
+- remove old lint dependencies
+- Merge pull request #10 from darcher-/linter-rehaul
+- updates to structure
+- lintlash
+- gi adjustment
+- unignores a few items
+- remove svg from script calls
+- remove svg & xml from eslint-prettier formatting
+- linter reformats
+- Merge pull request #9 from darcher-/undocker
+- remove all docker references
+- Merge pull request #8 from darcher-/id-helper-fn
+- update jest report display
+- tests new helper method
+- test & log complies
 - resolves variable typo
 - updates tests over helper method name change
 - applies helper method to large conditionals
 - junit dependency addition
 - coverage report as json
 - bump wrap width
+- Update README.md
+- Updates README.md
+- Merge pull request #7 from darcher-/test-badge
 - checks in some pre-emptive dependencies
 - lint style config & peer deps
 - change log
@@ -22,14 +67,15 @@
 - static file relocation
 - config updates
 - Docker includes
+- Merge pull request #4 from darcher-/config-lint-etc
 - lints, updates configs, etc.
 - includes header/footer components
 - Merge pull request #3 from darcher-/some-more
 - dump
 - align format/lint
-- includes latest commits to CHANGELOG.md
-- includes latest commits to CHANGELOG.md
-- includes latest commits to CHANGELOG.md
+- includes latest commits to  CHANGELOG.md
+- includes latest commits to  CHANGELOG.md
+- includes latest commits to  CHANGELOG.md
 - # This is a combination of 2 commits. # This is the 1st commit message:
 - changes pre-push to post-commit
 - updates pre-push hooks
